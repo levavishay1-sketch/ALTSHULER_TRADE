@@ -1,0 +1,3 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.PopulationRegistryCustomerVerification\obj\Debug\Alt.Crm.Plugins.PopulationRegistryCustomerVerification.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.PopulationRegistryCustomerVerification\obj\Debug\Alt.Crm.Plugins.PopulationRegistryCustomerVerification.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.PopulationRegistryCustomerVerification\obj\Debug\Alt.Crm.Plugins.PopulationRegistryCustomerVerification.pdb

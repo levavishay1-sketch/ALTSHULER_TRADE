@@ -1,0 +1,4 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Lead\obj\Debug\Alt.Crm.Plugins.Lead.csproj.AssemblyReference.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Lead\obj\Debug\Alt.Crm.Plugins.Lead.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Lead\obj\Debug\Alt.Crm.Plugins.Lead.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Lead\obj\Debug\Alt.Crm.Plugins.Lead.pdb

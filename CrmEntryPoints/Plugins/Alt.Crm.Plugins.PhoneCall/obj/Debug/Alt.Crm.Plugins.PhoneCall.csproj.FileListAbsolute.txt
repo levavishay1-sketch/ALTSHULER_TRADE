@@ -1,0 +1,3 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.PhoneCall\obj\Debug\Alt.Crm.Plugins.PhoneCall.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.PhoneCall\obj\Debug\Alt.Crm.Plugins.PhoneCall.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.PhoneCall\obj\Debug\Alt.Crm.Plugins.PhoneCall.pdb

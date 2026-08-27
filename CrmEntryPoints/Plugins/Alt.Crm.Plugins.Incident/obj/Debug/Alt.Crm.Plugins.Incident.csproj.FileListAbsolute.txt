@@ -1,0 +1,4 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Incident\obj\Debug\Alt.Crm.Plugins.Incident.csproj.AssemblyReference.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Incident\obj\Debug\Alt.Crm.Plugins.Incident.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Incident\obj\Debug\Alt.Crm.Plugins.Incident.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Incident\obj\Debug\Alt.Crm.Plugins.Incident.pdb

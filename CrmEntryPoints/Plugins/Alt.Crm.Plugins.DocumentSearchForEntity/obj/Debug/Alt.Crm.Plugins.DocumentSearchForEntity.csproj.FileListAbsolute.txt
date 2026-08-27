@@ -1,0 +1,4 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.DocumentSearchForEntity\obj\Debug\Alt.Crm.Plugins.DocumentSearchForEntity.csproj.AssemblyReference.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.DocumentSearchForEntity\obj\Debug\Alt.Crm.Plugins.DocumentSearchForEntity.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.DocumentSearchForEntity\obj\Debug\Alt.Crm.Plugins.DocumentSearchForEntity.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.DocumentSearchForEntity\obj\Debug\Alt.Crm.Plugins.DocumentSearchForEntity.pdb

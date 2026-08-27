@@ -1,0 +1,55 @@
+{
+    "lead": [
+        {
+            "label": "Mobile Phone",
+            "value": "0545505455",
+            "logicalname": "mobilephone",
+            "type": "string"
+        },
+        {
+            "label": "Email",
+            "value": "test@gmail.com",
+            "logicalname": "emailadress",
+            "type": "string"
+        },
+        {
+            "label": "First Name",
+            "value": "Natasha",
+            "logicalname": "firstname",
+            "type": "string"
+        },
+        {
+            "label": "Last Name",
+            "value": "Sakharov",
+            "logicalname": "lastname",
+            "type": "string"
+        }
+    ],
+    "opportunity": [
+        {
+            "label": "Hobbies",
+            "value": [
+                "sport",
+                "music"
+            ],
+            "logicalname": "hobby",
+            "type": "multioptionset"
+        },
+        {
+            "label": "Contact",
+            "logicalname": "contact",
+            "values": [
+                {
+                    "Id": "122334423",
+                    "MobilePhone": "0545505455",
+                    "Name": "Adam"
+                },
+                {
+                    "Id": "323245576",
+                    "MobilePhone": "0545505444",
+                    "Name": "Natasha"
+                }
+            ]
+        }
+    ]
+}

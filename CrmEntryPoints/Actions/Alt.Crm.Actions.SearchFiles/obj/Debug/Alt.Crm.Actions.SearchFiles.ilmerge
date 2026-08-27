@@ -1,0 +1,12 @@
+Alt.Crm.Actions.SearchFiles.dll
+Alt.BusinessLogicLayer.Crm.dll
+Alt.Framework.dll
+Alt.Framework.EntryPoints.Crm.dll
+Microsoft.Bcl.AsyncInterfaces.dll
+System.Buffers.dll
+System.Memory.dll
+System.Numerics.Vectors.dll
+System.Text.Encodings.Web.dll
+System.Text.Json.dll
+System.Threading.Tasks.Extensions.dll
+System.ValueTuple.dll

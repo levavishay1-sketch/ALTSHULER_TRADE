@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+  <!-- Configurations that affect the Test Framework -->
+ 
+
+  <!-- Parameters used by tests at runtime -->
+  <TestRunParameters>
+    <Parameter name="webAppUrl" value="http://localhost" />
+    <Parameter name="CRMConnectionString" value="Server=xxx; Username=xxx; Password=xxx; authtype=Office365" />
+    <Parameter name="xmlPath" value="" />
+  </TestRunParameters>
+
+  <!-- Adapter Specific sections -->
+
+  <!-- MSTest adapter -->
+  <MSTest>
+    <MapInconclusiveToFailed>True</MapInconclusiveToFailed>
+    <CaptureTraceOutput>false</CaptureTraceOutput>
+    <DeleteDeploymentDirectoryAfterTestRunIsComplete>False</DeleteDeploymentDirectoryAfterTestRunIsComplete>
+    <DeploymentEnabled>False</DeploymentEnabled>
+  </MSTest>
+
+</RunSettings>

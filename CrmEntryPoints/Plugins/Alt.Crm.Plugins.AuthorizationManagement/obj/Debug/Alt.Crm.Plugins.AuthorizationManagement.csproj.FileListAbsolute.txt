@@ -1,0 +1,4 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.AuthorizationManagement\obj\Debug\Alt.Crm.Plugins.AuthorizationManagement.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.AuthorizationManagement\obj\Debug\Alt.Crm.Plugins.AuthorizationManagement.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.AuthorizationManagement\obj\Debug\Alt.Crm.Plugins.AuthorizationManagement.pdb
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.AuthorizationManagement\obj\Debug\Alt.Crm.Plugins.AuthorizationManagement.csproj.AssemblyReference.cache

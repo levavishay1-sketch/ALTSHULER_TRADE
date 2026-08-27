@@ -1,0 +1,3 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Portfolio\obj\Debug\Alt.Crm.Plugins.Portfolio.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Portfolio\obj\Debug\Alt.Crm.Plugins.Portfolio.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Portfolio\obj\Debug\Alt.Crm.Plugins.Portfolio.pdb

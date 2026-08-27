@@ -1,0 +1,4 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.DigitalForm\obj\Debug\Alt.Crm.Plugins.DigitalForm.csproj.AssemblyReference.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.DigitalForm\obj\Debug\Alt.Crm.Plugins.DigitalForm.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.DigitalForm\obj\Debug\Alt.Crm.Plugins.DigitalForm.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.DigitalForm\obj\Debug\Alt.Crm.Plugins.DigitalForm.pdb

@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AudibleCompletionNotification>true</AudibleCompletionNotification>
+  <CrmSvcUtilRelativePath>DLaB.EarlyBoundGenerator\crmsvcutil.exe</CrmSvcUtilRelativePath>
+  <IncludeCommandLine>true</IncludeCommandLine>
+  <MaskPassword>true</MaskPassword>
+  <SettingsVersion>1.2023.12.6</SettingsVersion>
+  <Version>1.2023.12.6</Version>
+  <ExtensionConfig>
+    <ActionPrefixesWhitelist />
+    <ActionsWhitelist>alt_logger|
+alt_templategenerator</ActionsWhitelist>
+    <ActionsToSkip>_CloneRoutingRuleSet|
+_EvaluateRuleAndRoute|
+_EvaluateSearchRequest|
+_GetServiceTreeData|
+_InvokeHideReserveEntities|
+_MoveRoutingRuleItemAt|
+_RemoveMarketingListMembersByIds|
+_ResourcesAddUpdateAction|
+_ResourcesRemoveUpdateAction|
+_RetrieveActivitiesByResources|
+_RoutingRuleSetValidation|
+_SaveServiceTreeData|
+_ServiceCalendarAction|
+_SkillToUser|
+_SyncKnowledgeManagementSettings|
+AlmHandler|
+Analyze|
+AnalyzeSentiment|
+BatchGetFlowMachineStatus|
+BatchPrediction|
+CancelTraining|
+CategorizeText|
+CreateNPSUserRating|
+DetectLanguage|
+ExtractKeyPhrases|
+ExtractTextEntities|
+GetJobStatus|
+GetPublicKey|
+Ingest|
+install|
+IsPaiEnabled|
+IsPmEnabled|
+LeaveGroup|
+msdyn_ActivateProcesses|
+msdyn_ActivateSdkMessageProcessingSteps|
+msdyn_AddBotUser|
+msdyn_AddSuggestedCards|
+msdyn_AgentscriptDataMigrationCustomAction|
+msdyn_AnalyticsSaveDataInConfigStore|
+msdyn_AnalyzeServiceHealth|
+msdyn_AnalyzeServiceHealthAsync|
+msdyn_ApplyPrediction|
+msdyn_ApplyRoutingRuleEntityRecord|
+msdyn_applyworktemplateforresources|
+msdyn_assignentity|
+msdyn_assignentitysync|
+msdyn_AssignOwnerToUnassignedRecords|
+msdyn_BookingResource|
+msdyn_BookingResourceRequirement|
+msdyn_BookRequirementGroup|
+msdyn_BusinessClosureDelete|
+msdyn_BusinessClosureRetrieve|
+msdyn_BusinessClosureSave|
+msdyn_CalculateAndUpdateBookingTravel|
+msdyn_CalendarBulkDelete|
+msdyn_CancelBookings|
+msdyn_CapacityProfilesToUsers|
+msdyn_CascadeBookingChanges|
+msdyn_CECLiveDataMigrationCustomAction|
+msdyn_cesinvoke|
+msdyn_CheckAnyUserIsIntegrationUser|
+msdyn_CheckFetchXmlAndLayoutXmlOfSavedQueries|
+msdyn_CheckForConditionXmlFormat|
+msdyn_CheckForCustomizedAppModule|
+msdyn_CheckForCustomizedOptionSet|
+msdyn_CheckForCustomizedSitemap|
+msdyn_CheckForCustomizedWebResources|
+msdyn_CheckForDeletedProcess|
+msdyn_CheckForDeletedSDKMessageProcessingSteps|
+msdyn_CheckForDeletedWebResources|
+msdyn_CheckForDuplicatesAction|
+msdyn_CheckForNoOrphanWorkflows|
+msdyn_CheckForPendingProcesses|
+msdyn_CheckForWorkflowTypeOfRuleItems|
+msdyn_CheckGeolocationEnabled|
+msdyn_CheckIfActivityMonitorEnabled|
+msdyn_CheckIfAutoRouteToOwnerQueueEnabled|
+msdyn_CheckIfCSFormsFromUnmanagedLayer|
+msdyn_CheckIfEmailResponseTemplateEntityTypeMatch|
+msdyn_CheckIfFormsHaveTooManyCustomControls|
+msdyn_CheckIfProcessesAreActive|
+msdyn_CheckIfProcessesOwnedByDisabledUsers|
+msdyn_CheckIfSalesFormsFromUnmanagedLayer|
+msdyn_CheckIfSDKMessageProcessingStepsAreActive|
+msdyn_CheckIfSLAOwnerIsActiveOrInactive|
+msdyn_CheckOrgSettingIsSOPIntegrationEnabled|
+msdyn_CheckOrgSettingOOBPriceCalculationEnabled|
+msdyn_CheckReqRibbonCommandDef|
+msdyn_CheckReqWebResourceOnSystemForm|
+msdyn_ClassifySegments|
+msdyn_CleanupDiagnosticsWrappers|
+msdyn_CloneAttachmentsPluginAction|
+msdyn_cloneentity|
+msdyn_CloneMultiple|
+msdyn_ConditionXmlConversion|
+msdyn_ConnectSequence|
+msdyn_ConvertCJOJsonToSequenceJson|
+msdyn_ConvertSequenceJsonToCJOJson|
+msdyn_ConvertToLocalizedFeatures|
+msdyn_CreateActionFlow|
+msdyn_CreateApmEventHandler|
+msdyn_CreateNewAnalysisJob|
+msdyn_CreateNewAnalysisJobForRuleSet|
+msdyn_CreatePrediction|
+msdyn_CreatePublishAIConfig|
+msdyn_CreatePublishAIModel|
+msdyn_CreateRequirementGroupBookings|
+msdyn_CreateRequirementModel|
+msdyn_CreateResourceOptimizationRequest|
+msdyn_CreateSimilarOpportunitiyPredictionModel|
+msdyn_CreateSuggestedActivity|
+msdyn_CreateSuggestedContact|
+msdyn_CreateSwarmParticipants|
+msdyn_CreateTrainConfig|
+msdyn_CreateTrainEffortModelConfig|
+msdyn_CustomerServiceSolutionHealthRulesRegistration|
+msdyn_DataValidationApi|
+msdyn_DeleteCalendar|
+msdyn_DeleteFlow|
+msdyn_DeletePrediction|
+msdyn_DisableBotUser|
+msdyn_DisconnectSequence|
+msdyn_DismissEmailInfraActionCard|
+msdyn_DismissSuggestedActivity|
+msdyn_DismissSuggestedContact|
+msdyn_DuplicateDetectionClientTriggerAction|
+msdyn_DuplicateDetectionTriggerAction|
+msdyn_EditAndSaveSuggestedContact|
+msdyn_EditSequence|
+msdyn_EffortModelPrediction|
+msdyn_EnableLinkedInDataValidation|
+msdyn_EnableSharePoint|
+msdyn_EnableUnifiedRouting|
+msdyn_EvaluateMasterEntityRoutingConfiguration|
+msdyn_ExecuteARC|
+msdyn_ExecuteCustomerNotificationRequest|
+msdyn_ExecutePrimaryCreatePostActions|
+msdyn_ExecuteRecurringSalesOperation|
+msdyn_ExecuteSandboxRequest|
+msdyn_ExecuteSIRequest|
+msdyn_ExecuteSISampleDataRequest|
+msdyn_Feedback|
+msdyn_FetchAllPredictionModels|
+msdyn_FetchKPIValues|
+msdyn_FindEntityForPolymorphicLookup|
+msdyn_FindRulesetDependencies|
+msdyn_FixSLARelationshipsOnTargetEntities|
+msdyn_ForecastApi|
+msdyn_ForecastGenerateHierarchy|
+msdyn_ForecastInstanceActions|
+msdyn_ForecastRecalculate|
+msdyn_ForecastRecalculateAll|
+msdyn_ForecastRecalculateAsync|
+msdyn_FpsAction|
+msdyn_GDPROptoutContact|
+msdyn_GDPROptoutLead|
+msdyn_GDPROptoutUser|
+msdyn_GeocodeAddress|
+msdyn_GetACIMarsConnectorStatus|
+msdyn_GetAdditionalPropertiesMetadata|
+msdyn_GetAISuggestedContacts|
+msdyn_GetAllAttributesData|
+msdyn_GetAllLeadPredictionModels|
+msdyn_GetAnalyticsReportDetail|
+msdyn_GetAnalyticsReportToken|
+msdyn_getAppConfig|
+msdyn_getAppConfigByContext|
+msdyn_GetAttributeInfluenceStatistics|
+msdyn_GetAutoCaptureUri|
+msdyn_GetAvailabilitySummaryFromDemand|
+msdyn_GetAzureToken|
+msdyn_GetBookableResources|
+msdyn_GetBookingDetailsByRequirementIds|
+msdyn_GetBotConfiguration|
+msdyn_GetCaseAggregation|
+msdyn_GetCaseSuggestions|
+msdyn_GetCaseSuggestionsForConversation|
+msdyn_GetCecCompatibilityForOmniChannel|
+msdyn_GetChildResources|
+msdyn_GetContactsForOptyConnectedSalesTeamMember|
+msdyn_GetContactsForOptyConnectedSalesTeamMemberInteractedTimeline|
+msdyn_GetContactsFromAssociatedConversations|
+msdyn_GetContactsFromTimeline|
+msdyn_GetDuplicatesAction|
+msdyn_GetHierarchyData|
+msdyn_GetIoTAlertAggregation|
+msdyn_GetIoTCommandMetadata|
+msdyn_GetIoTVisualizationSummary|
+msdyn_getIslandUrl|
+msdyn_GetKAObjectFromTemplate|
+msdyn_GetKnowledgeSuggestions|
+msdyn_GetKnowledgeSuggestionsForConversation|
+msdyn_GetLegalAcceptanceStatus|
+msdyn_GetMultipleResourceBookingDetails|
+msdyn_GetNotesAnalysis|
+msdyn_GetOCSharedServiceURI|
+msdyn_GetODOSFeatureEnabledRoles|
+msdyn_GetODOSFeatureProvisioningStatus|
+msdyn_GetOrCreateBookableResources|
+msdyn_GetOrCreateExtUserSetting|
+msdyn_GetOrCreateLinkedActivity|
+msdyn_GetOrganizationalUnitsWithinRadius|
+msdyn_GetOrganizationProvisioningStatus|
+msdyn_GetPoPToken|
+msdyn_GetPredictionModelStatus|
+msdyn_GetPremiumOrgStatus|
+msdyn_GetRecordUsers|
+msdyn_GetRelatedIoTDevicesByEntity|
+msdyn_GetRequirementChartData|
+msdyn_GetRequirementDemand|
+msdyn_GetRequirementDemandDisplay|
+msdyn_GetRequirementDependencySet|
+msdyn_GetRequirementModels|
+msdyn_GetResourceBookingDetails|
+msdyn_GetResourceBookingFormParameters|
+msdyn_GetResourceGroupMemberships|
+msdyn_GetResourcePopupDetails|
+msdyn_GetResources|
+msdyn_GetResourceUtilizationGrid|
+msdyn_GetResourceWorkHoursForTimeFrame|
+msdyn_GetRICommonFCBStatus|
+msdyn_GetRIProvisioningStatus|
+msdyn_GetRITenantEndpoint|
+msdyn_GetSalesAcceleratedSeller|
+msdyn_GetSalesAcceleratedSellerDetails|
+msdyn_GetSalesAccelerationConfigurationStatus|
+msdyn_GetSankeyViewKPIs|
+msdyn_GetSequenceAnalyticsKPIs|
+msdyn_GetServiceBaseUrl|
+msdyn_getsifeatureconfiguration|
+msdyn_GetSIFeatureConfiguration|
+msdyn_GetSILicenseStatus|
+msdyn_GetSIPackageStatus|
+msdyn_GetSubjectHierarchyData|
+msdyn_GetSuggestedContacts|
+msdyn_GetSummaryBookings|
+msdyn_GetSwarmSkills|
+msdyn_GetTalkingPoints|
+msdyn_GetTimeLineRecords|
+msdyn_GetTrainingResults|
+msdyn_GetUserConsentStatus|
+msdyn_GetWorkListConfiguration|
+msdyn_HandleTrainingStatus|
+msdyn_IngestAnalyticsData|
+msdyn_InitEntityRoutingFlow|
+msdyn_initializedefaultclonequery|
+msdyn_InitializeSessionChannel|
+msdyn_InsertTrainingRecords|
+msdyn_InstallSalesInsightsSolution|
+msdyn_InvokeServiceStoredProc|
+msdyn_IoTCheckIfRecordExistsInEntity|
+msdyn_IoTGetDeviceEvents|
+msdyn_IoTGetEditablePropertiesMetadata|
+msdyn_IoTGetIoTAlertCustomAttributes|
+msdyn_IoTGetModelStatusInternal|
+msdyn_IoTGetTagsMetadata|
+msdyn_IoTHubGetAggregatedDeviceReadings|
+msdyn_IoTHubPullDeviceData|
+msdyn_IoTHubQueryDeviceReadings|
+msdyn_IoTHubRegisterDevice|
+msdyn_IoTNewPrimaryAlert|
+msdyn_IoTPullDeviceDataActionHandler|
+msdyn_IoTRegisterActionHandler|
+msdyn_IoTSendTestAlert|
+msdyn_IoTSetConfiguration|
+msdyn_IsAdvancedUnifiedRoutingEnabled|
+msdyn_IsBotUserConfigured|
+msdyn_IsLinkedInDataValidationEnabled|
+msdyn_IsMSTeamsUserSyncFeatureEnabled|
+msdyn_IsSharePointEnabled|
+msdyn_JsonGetBoolean|
+msdyn_JsonGetNumber|
+msdyn_JsonGetString|
+msdyn_ManageSLAInstances|
+msdyn_MarketingListMetadataUpdate|
+msdyn_MarketingMetadataUpdate|
+msdyn_MarketingMetadataUpdatePostImport|
+msdyn_McMcbyValues|
+msdyn_MergeDuplicatesAction|
+msdyn_MigrateArc|
+msdyn_MigrateArcProactiveRun|
+msdyn_MigrateSequence|
+msdyn_MigrateSla|
+msdyn_MigrateSlaProactiveRun|
+msdyn_ModelAppDiagnosis|
+msdyn_ModelAppRepair|
+msdyn_OcAgentsShouldHaveCapacityRule|
+msdyn_OcBotsShouldHaveCapacityRule|
+msdyn_OcBotsShouldNotHavePotentiallyLowCapacityRule|
+msdyn_OcChannelProviderShouldHaveAllRequiredFieldsRule|
+msdyn_OcQueuesShouldHaveAgentsRule|
+msdyn_OCResetInviteParamsInfo|
+msdyn_OCResetLastMessageInfo|
+msdyn_OcSdkShouldBeActiveRule|
+msdyn_OcServiceEndpointShouldBeConfiguredRule|
+msdyn_OperatingHoursUpgradeFlow|
+msdyn_OrphanCalendarCleanup|
+msdyn_OSApplyPrediction|
+msdyn_OSConvertToLocalizedFeatures|
+msdyn_OSCreatePrediction|
+msdyn_OSDeletePrediction|
+msdyn_OSGetAllOpportunityPredictionModels|
+msdyn_OSGetPredictionModelStatus|
+msdyn_OSGetTrainingResults|
+msdyn_OSUpdateModelGrades|
+msdyn_ParentIoTAlerts|
+msdyn_PerformNotesAnalysisAction|
+msdyn_PostOperationRevokeUsrConsent|
+msdyn_PostOrganizationProvisioningStatus|
+msdyn_PostRetrieveRealTimeSuggestedActivities|
+msdyn_PredictiveScoringBackgroundJob|
+msdyn_PredictiveScoringDataMigration|
+msdyn_ProvisionIoTSuggestionsMLModel|
+msdyn_ProvisionIoTSuggestionsMLModelInternal|
+msdyn_ProvisionSharePointDocumentLibraries|
+msdyn_PublishAIModel|
+msdyn_PublishEffortAIModel|
+msdyn_PullDataForIoTDevice|
+msdyn_QueryExchange|
+msdyn_reassignmentbatch|
+msdyn_reassignmentrun|
+msdyn_recurringsegmentaction|
+msdyn_RegisterCustomEntity|
+msdyn_RegisterIoTDevice|
+msdyn_RegisterSolutionHealthRule|
+msdyn_RemoveRequirementModel|
+msdyn_RequirementGroupOverview|
+msdyn_ResetOmnichannelProvider|
+msdyn_ResetWorkDistributionFlow|
+msdyn_ResolveSolutionHealthRuleFailure|
+msdyn_ResolveTimezone|
+msdyn_RetrieveActivities|
+msdyn_RetrieveActivityAnalyticsConfiguration|
+msdyn_RetrieveAppointmentsByAttendees|
+msdyn_RetrieveCadenceSuggestions|
+msdyn_retrieveConnections|
+msdyn_RetrieveDistanceMatrix|
+msdyn_RetrieveKnowledgeManagementSettings|
+msdyn_RetrieveKnowledgeSearchFilters|
+msdyn_RetrieveKnowledgeSearchModifiers|
+msdyn_RetrieveKnowledgeSuggestions|
+msdyn_RetrieveKpiItemRecord|
+msdyn_RetrieveKPIValuesForGDPR|
+msdyn_RetrieveKPIvaluesfromDCI|
+msdyn_RetrieveKpiValuesFromRI|
+msdyn_RetrieveOutlookSchedules|
+msdyn_RetrievePersonalizationFilters|
+msdyn_RetrieveRelationshipActivityKPIValues|
+msdyn_RetrieveRequirementGroupCandidates|
+msdyn_RetrieveResourceAvailability|
+msdyn_RetrieveSearchProviders|
+msdyn_RetrieveSuggestionPayloads|
+msdyn_RetrieveTypeValuesFromDCI|
+msdyn_RunSAUpgradeScript|
+msdyn_RunSolutionCheckerRules|
+msdyn_SalesAcceleratorMailNotificationToAdmin|
+msdyn_SalesInsightsGetEuclidConsentStatus|
+msdyn_SalesRoutingIdentifyAttributes|
+msdyn_SaveCalendar|
+msdyn_ScheduleRealTimeScoring|
+msdyn_ScheduleRequirementGroup|
+msdyn_SearchResourceAvailability|
+msdyn_SearchResourceAvailabilityForRequirementGroup|
+msdyn_SendEmailFromTemplate|
+msdyn_SendEmailsToOptedInResources|
+msdyn_sendFeedback|
+msdyn_SendMessageToOCService|
+msdyn_SetAutoBlockedFlag|
+msdyn_SetFeatureStatus|
+msdyn_SetLegalAcceptanceStatus|
+msdyn_SetSharePointDocumentStatus|
+msdyn_SetTalkingPointLikedStatus|
+msdyn_SetTeamsDocumentStatus|
+msdyn_SetupRelationshipForEnablingEntityRouting|
+msdyn_ShouldEnableRoutingCommand|
+msdyn_ShowPrivacyTerms|
+msdyn_SIGetFCBStatus|
+msdyn_SignalRInstanceActions|
+msdyn_SimulateBookingResource|
+msdyn_SiteMapDiagnosis|
+msdyn_SiteMapRepair|
+msdyn_SLACustomTimeCalculationTemplate|
+msdyn_SLATimeCalculation|
+msdyn_SnoozeEmailInfraActionCard|
+msdyn_StartODOSDeprovisioning|
+msdyn_StartODOSProvisioning|
+msdyn_StartRIProvisioning|
+msdyn_SuggestPrimaryForMergeAction|
+msdyn_SwarmExpertFinder|
+msdyn_SyncKnowledgeManagementSettingsV2|
+msdyn_TrackExchangeActivity|
+msdyn_TrainAIModel|
+msdyn_TrainEffortModel|
+msdyn_TrainModel|
+msdyn_transformentity|
+msdyn_TriggerSequenceStatsDockerJob|
+msdyn_UnifiedRoutingSetupTrackerProvisionStatusCheck|
+msdyn_UpdateAutoCaptureSettings|
+msdyn_UpdateAutoScheduledTrainingStatus|
+msdyn_UpdateBookingsStatus|
+msdyn_UpdateCadenceRunStatus|
+msdyn_UpdateEffortModelStatus|
+msdyn_Updatefeatureconfig|
+msdyn_UpdateKbAttachmentPrivilege|
+msdyn_UpdateModelGrades|
+msdyn_UpdateModelStatus|
+msdyn_UpdateODOSFeatureEnabledRoles|
+msdyn_UpdatePrivacyTerms|
+msdyn_UpdateRequirementDemand|
+msdyn_UpdateRequirementModel|
+msdyn_UpdateRITenantInfo|
+msdyn_UpdateSequenceDailyUsageMetric|
+msdyn_UpdateUserConsentBasedonSecurityRoles|
+msdyn_UpgradeTelemetry|
+msdyn_UpsertSellerAssignmentMap|
+msdyn_URFirstPartyIntegrationApi|
+msdyn_ValidateTSIKey|
+msdyn_WorkstreamCapacityShouldBeLessThanAgentsRule|
+msdyn_WorkstreamShouldHaveNotificationTemplatesRule|
+msdyn_WorkstreamShouldHaveSessionTemplatesRule|
+msdyn_WorkstreamShouldNotHaveDuplicateContextRule|
+msdyn_WorkstreamShouldNotHaveEmptyRoutingRulesAboveRulesWithConditionRule|
+msdyn_WorkstreamWithPushModeShouldNotAllowOfflineModeRule|
+msdynmkt_ChartWidgetDataCustomAction|
+msdynmkt_DiscoverPlaceholders|
+msdynmkt_GetPublicConfigurationCustomAction|
+msdynmkt_ListWidgetDataCustomAction|
+msdynmkt_PersonalizationGetEntityAttributes|
+msdynmkt_PersonalizationGetEntityProviders|
+msdynmkt_PersonalizationGetEntityTypes|
+msdynmkt_PersonalizationGetEventsByName|
+msdynmkt_PredefinedPlaceholderAddCount|
+msdynmkt_RetrieveAllFeatureConfigurations|
+msdynmkt_RetrieveServiceFeatureFlags|
+msdynmkt_ValidatePlaceholders|
+msdynmkt_ValueWidgetDataCustomAction|
+PowerAutomateProxy|
+Predict|
+PredictByReference|
+PredictionSchema|
+PublishAIConfiguration|
+PvaAuthorize|
+PvaCreateBotComponents|
+PvaCreateContentSnapshot|
+PvaDeleteBot|
+PvaGetDirectLineEndpoint|
+PvaGetFeatureControlSet|
+PvaGetMaxDatabaseVersion|
+PvaGetUserBots|
+PvaPublish|
+PvaPublishStatus|
+PvaStartConversation|
+QuickTest|
+RecognizeText|
+RegisterFlowMachine|
+retrieveappsetting|
+retrieveappsettinglist|
+saveappsetting|
+SchedulePrediction|
+ScheduleRetrain|
+ScheduleTraining|
+Share|
+SyncCopresenceState|
+Train|
+UnpublishAIConfiguration|
+UnschedulePrediction|
+UnscheduleTraining|
+ValidateAIConfiguration</ActionsToSkip>
+    <AddDebuggerNonUserCode>true</AddDebuggerNonUserCode>
+    <AddNewFilesToProject>true</AddNewFilesToProject>
+    <AddOptionSetMetadataAttribute>true</AddOptionSetMetadataAttribute>
+    <CamelCaseClassNames>false</CamelCaseClassNames>
+    <CamelCaseMemberNames>false</CamelCaseMemberNames>
+    <CreateOneFilePerAction>false</CreateOneFilePerAction>
+    <CreateOneFilePerEntity>false</CreateOneFilePerEntity>
+    <CreateOneFilePerOptionSet>false</CreateOneFilePerOptionSet>
+    <DeleteFilesFromOutputFolders>false</DeleteFilesFromOutputFolders>
+    <EntitiesToSkip />
+    <EntitiesWhitelist>account|
+activityparty|
+activitypointer|
+alt_accountholder|
+alt_activitysubject|
+alt_apiconfiguration|
+alt_archivedocumentsearch|
+alt_authorizationmanagement|
+alt_automaticincidenttemplate|
+alt_bank|
+alt_bankaccountdetails|
+alt_blacklistscheck|
+alt_branch|
+alt_country|
+alt_creditlimit|
+alt_customeroperationrequest|
+alt_customeroperationtemplate|
+alt_deposit|
+alt_digitalform|
+alt_digitalformstatus|
+alt_digitalformtemplate|
+alt_digitalformverification|
+alt_document|
+alt_emailtemplate|
+alt_fetchconfiguration|
+alt_incidentstatus|
+alt_incidentstatuslog|
+alt_joiningprocesssummary|
+alt_kyc|
+alt_loyaltyprogram|
+alt_moneylaunderingcalculation|
+alt_occupation|
+alt_pdfproductiontemplate|
+alt_populationregistrycustomerverification|
+alt_portfolio|
+alt_referralsource|
+alt_representativereward|
+alt_scheduledoperation|
+alt_schedulersetup|
+alt_searchentrypointconfiguration|
+alt_sms|
+alt_smstemplate|
+alt_subject1|
+alt_subject2|
+alt_systemlog|
+alt_tradingpermission|
+alt_treatmentstatus|
+alt_withdrawalrequest|
+annotation|
+appointment|
+contact|
+email|
+incident|
+incidentresolution|
+lead|
+opportunity|
+phonecall|
+queue|
+systemuser|
+task|
+team|
+teammembership</EntitiesWhitelist>
+    <EntityAttributeSpecifiedNames />
+    <EntityPrefixesToSkip />
+    <EntityPrefixesWhitelist />
+    <GenerateActionAttributeNameConsts>false</GenerateActionAttributeNameConsts>
+    <GenerateAttributeNameConsts>true</GenerateAttributeNameConsts>
+    <GenerateAnonymousTypeConstructor>true</GenerateAnonymousTypeConstructor>
+    <GenerateConstructorsSansLogicalName>false</GenerateConstructorsSansLogicalName>
+    <GenerateEntityRelationships>true</GenerateEntityRelationships>
+    <GenerateEntityTypeCode>false</GenerateEntityTypeCode>
+    <GenerateEnumProperties>false</GenerateEnumProperties>
+    <GenerateOnlyReferencedOptionSets>true</GenerateOnlyReferencedOptionSets>
+    <GenerateOptionSetMetadataAttribute>true</GenerateOptionSetMetadataAttribute>
+    <GroupLocalOptionSetsByEntity>false</GroupLocalOptionSetsByEntity>
+    <InvalidCSharpNamePrefix>_</InvalidCSharpNamePrefix>
+    <MakeAllFieldsEditable>false</MakeAllFieldsEditable>
+    <MakeReadonlyFieldsEditable>false</MakeReadonlyFieldsEditable>
+    <MakeResponseActionsEditable>false</MakeResponseActionsEditable>
+    <LocalOptionSetFormat>{0}_{1}</LocalOptionSetFormat>
+    <OptionSetLanguageCodeOverride
+      xsi:nil="true" />
+    <OptionSetPrefixesToSkip />
+    <OptionSetsToSkip />
+    <OptionSetNames />
+    <ProjectNameForEarlyBoundFiles />
+    <PropertyEnumMappings>alt_digitalform.alt_DigitalFormTypeCode,alt_digitalformtypecode|
+alt_digitalform.alt_SourceSystemCode,alt_sourcesystemcode</PropertyEnumMappings>
+    <ReadSerializedMetadata>false</ReadSerializedMetadata>
+    <RemoveRuntimeVersionComment>true</RemoveRuntimeVersionComment>
+    <ReplaceOptionSetPropertiesWithEnum>false</ReplaceOptionSetPropertiesWithEnum>
+    <SerializeMetadata>false</SerializeMetadata>
+    <TokenCapitalizationOverrides>AccessTeam|
+ActiveState|
+BusinessAs|
+CardUci|
+DefaultOnCase|
+EmailAnd|
+FeatureSet|
+IsMsTeams|
+IsPaiEnabled|
+IsSopIntegration|
+MsDyUsd|
+O365Admin|
+OnHold|
+OwnerOnAssign|
+ParticipatesIn|
+PartiesOnEmail|
+PauseStates|
+SentOn|
+SlaId|
+SlaKpi|
+SyncOptIn|
+Timeout|
+UserPuid|
+VoiceMail|
+Weblink</TokenCapitalizationOverrides>
+    <UnmappedProperties>duplicaterule:BaseEntityTypeCode,MatchingEntityTypeCode|
+organization:CurrencyFormatCode,DateFormatCode,TimeFormatCode,WeekStartDayCode</UnmappedProperties>
+    <UseDeprecatedOptionSetNaming>false</UseDeprecatedOptionSetNaming>
+    <UseLogicalNames>false</UseLogicalNames>
+    <UseTfsToCheckoutFiles>false</UseTfsToCheckoutFiles>
+    <UseInternalAsAccessModifier>false</UseInternalAsAccessModifier>
+    <WaitForAttachedDebugger>false</WaitForAttachedDebugger>
+  </ExtensionConfig>
+  <ExtensionArguments>
+    <Argument>
+      <SettingType>Actions</SettingType>
+      <Name>codecustomization</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Action.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Actions</SettingType>
+      <Name>codegenerationservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Action.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Actions</SettingType>
+      <Name>codewriterfilter</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Action.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Actions</SettingType>
+      <Name>metadataproviderservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.BaseMetadataProviderService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>codecustomization</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Entity.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>codegenerationservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Entity.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>codewriterfilter</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Entity.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>namingservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.NamingService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>metadataproviderservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.Entity.MetadataProviderService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>OptionSets</SettingType>
+      <Name>codecustomization</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.OptionSet.CustomizeCodeDomService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>OptionSets</SettingType>
+      <Name>codegenerationservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.OptionSet.CustomCodeGenerationService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>OptionSets</SettingType>
+      <Name>codewriterfilter</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.OptionSet.CodeWriterFilterService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>OptionSets</SettingType>
+      <Name>namingservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.NamingService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>OptionSets</SettingType>
+      <Name>metadataproviderservice</Name>
+      <Value>DLaB.CrmSvcUtilExtensions.BaseMetadataProviderService,DLaB.CrmSvcUtilExtensions</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+  </ExtensionArguments>
+  <UserArguments>
+    <Argument>
+      <SettingType>Actions</SettingType>
+      <Name>generateActions</Name>
+      <Value>true</Value>
+      <Valueless>true</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Actions</SettingType>
+      <Name>out</Name>
+      <Value>EBG\Actions.cs</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>All</SettingType>
+      <Name>namespace</Name>
+      <Value>Alt.DataModel.Crm.Entities</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>All</SettingType>
+      <Name>SuppressGeneratedCodeAttribute</Name>
+      <Value>true</Value>
+      <Valueless>true</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>out</Name>
+      <Value>Entities\Entities.cs</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>Entities</SettingType>
+      <Name>servicecontextname</Name>
+      <Value>CrmServiceContext</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+    <Argument>
+      <SettingType>OptionSets</SettingType>
+      <Name>out</Name>
+      <Value>EBG\OptionSets.cs</Value>
+      <Valueless>false</Valueless>
+    </Argument>
+  </UserArguments>
+  <WorkflowlessActions>msdyn_GetSIFeatureConfiguration|
+RetrieveAppSetting|
+RetrieveAppSettingList|
+SaveAppSetting</WorkflowlessActions>
+</Config>

@@ -1,0 +1,4 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.AccountHolder\obj\Debug\Alt.Crm.Plugins.AccountHolder.csproj.AssemblyReference.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.AccountHolder\obj\Debug\Alt.Crm.Plugins.AccountHolder.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.AccountHolder\obj\Debug\Alt.Crm.Plugins.AccountHolder.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.AccountHolder\obj\Debug\Alt.Crm.Plugins.AccountHolder.pdb

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29CACFE5-091C-41D6-B920-77D8C4455949}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alt.DataModel.ExernalServices</RootNamespace>
+    <AssemblyName>Alt.DataModel.ExernalServices</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Alt.DataModel.ExernalServices.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Text.Json.6.0.7\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ANVIL\AnvilGeneralRequest.cs" />
+    <Compile Include="ANVIL\AnvilPDFTemplate.cs" />
+    <Compile Include="ANVIL\AnvilTradeAgreement.cs" />
+    <Compile Include="Enums\ESBPopulationRegisterVerificationResultCode.cs" />
+    <Compile Include="Enums\ESBResultStatusCode.cs" />
+    <Compile Include="Enums\ExternalSystemNameCode.cs" />
+    <Compile Include="Enums\GovernmentDataTypeCode.cs" />
+    <Compile Include="Enums\OutSystemFormIdCode.cs" />
+    <Compile Include="Enums\InformationPackageCode.cs" />
+    <Compile Include="Enums\RecordMatchCode.cs" />
+    <Compile Include="Enums\SecretTypeCode.cs" />
+    <Compile Include="Enums\ShenhavYesNoCode.cs" />
+    <Compile Include="Enums\StatementTypeCode.cs" />
+    <Compile Include="Enums\TradeCustomerAgreementCode.cs" />
+    <Compile Include="Enums\TradeOneAccountTypeCode.cs" />
+    <Compile Include="ESB\ESBAttribute.cs" />
+    <Compile Include="ESB\ESBAuthentication.cs" />
+    <Compile Include="ESB\ESBBlacklistsCheck.cs" />
+    <Compile Include="ESB\ESBBlacklistsCheckResponse.cs" />
+    <Compile Include="ESB\ESBDigitalFormResponse.cs" />
+    <Compile Include="ESB\ESBDocumentDownload.cs" />
+    <Compile Include="ESB\ESBDocumentResponse.cs" />
+    <Compile Include="ESB\ESBArchiveDocumentSearch.cs" />
+    <Compile Include="ESB\ESBDocumentUpdate.cs" />
+    <Compile Include="ESB\ESBDocumentUpload.cs" />
+    <Compile Include="ESB\ESBClubMembershipEligibilityRequest.cs" />
+    <Compile Include="ESB\ESBClubMembershipEligibilityResponse.cs" />
+    <Compile Include="ESB\ESBFeezbackLinkRequest.cs" />
+    <Compile Include="ESB\ESBFeezbackLinkResponse.cs" />
+    <Compile Include="ESB\ESBGovernmentDataRequest.cs" />
+    <Compile Include="ESB\ESBGovernmentDataResponse.cs" />
+    <Compile Include="ESB\ESBJoiningBenefitRequest.cs" />
+    <Compile Include="ESB\ESBLeadsForIVR.cs" />
+    <Compile Include="ESB\ESBLeadsForIVRResponse.cs" />
+    <Compile Include="ESB\ESBPopulationRegistryCustomerVerification.cs" />
+    <Compile Include="ESB\ESBPopulationRegistryCustomerVerificationResponse.cs" />
+    <Compile Include="ESB\ESBPortfolioAccountDepositsWithdrawals.cs" />
+    <Compile Include="ESB\ESBPortfolioBeneficiary.cs" />
+    <Compile Include="ESB\ESBPortfolioBody.cs" />
+    <Compile Include="ESB\ESBDigitalForm.cs" />
+    <Compile Include="ESB\ESBHeader.cs" />
+    <Compile Include="ESB\ESBJoiningForm.cs" />
+    <Compile Include="ESB\ESBJoiningFormResponse.cs" />
+    <Compile Include="ESB\ESBPortfolioEntitlements.cs" />
+    <Compile Include="ESB\ESBPortfolioFrames.cs" />
+    <Compile Include="ESB\ESBPortfolioGeneral.cs" />
+    <Compile Include="ESB\ESBPortfolioRelatedPersonIncome.cs" />
+    <Compile Include="ESB\ESBPortfolioStatementsMaildef.cs" />
+    <Compile Include="ESB\ESBResponse.cs" />
+    <Compile Include="ESB\ESBTradeOneUser.cs" />
+    <Compile Include="ESB\ESBTradeOneUserResponse.cs" />
+    <Compile Include="ExternalEntityBase.cs" />
+    <Compile Include="ESB\ESBSmsResponse.cs" />
+    <Compile Include="ESB\ESBSms.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Alt.DataModel.ExernalServices.snk" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\Alt.Framework.External\Alt.Framework.External.csproj">
+      <Project>{74FE5347-CC0C-4842-B8D5-171720204CB5}</Project>
+      <Name>Alt.Framework.External</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Alt.Framework\Alt.Framework.csproj">
+      <Project>{26ABA81F-53B7-453B-8638-139FBFA9D579}</Project>
+      <Name>Alt.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Crm\Alt.DataModel.Crm.Core\Alt.DataModel.Crm.Core.csproj">
+      <Project>{40766247-26A2-4B78-8381-016DCCF4D469}</Project>
+      <Name>Alt.DataModel.Crm.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Crm\Alt.DataModel.Crm.External\Alt.DataModel.Crm.External.csproj">
+      <Project>{C92B72EE-BDD9-4182-A452-834E9A728EA7}</Project>
+      <Name>Alt.DataModel.Crm.External</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

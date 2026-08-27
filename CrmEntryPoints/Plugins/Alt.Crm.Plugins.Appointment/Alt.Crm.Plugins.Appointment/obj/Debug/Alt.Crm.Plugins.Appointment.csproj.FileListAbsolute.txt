@@ -1,0 +1,4 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Appointment\Alt.Crm.Plugins.Appointment\obj\Debug\Alt.Crm.Plugins.Appointment.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Appointment\Alt.Crm.Plugins.Appointment\obj\Debug\Alt.Crm.Plugins.Appointment.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Appointment\Alt.Crm.Plugins.Appointment\obj\Debug\Alt.Crm.Plugins.Appointment.pdb
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.Appointment\Alt.Crm.Plugins.Appointment\obj\Debug\Alt.Crm.Plugins.Appointment.csproj.AssemblyReference.cache

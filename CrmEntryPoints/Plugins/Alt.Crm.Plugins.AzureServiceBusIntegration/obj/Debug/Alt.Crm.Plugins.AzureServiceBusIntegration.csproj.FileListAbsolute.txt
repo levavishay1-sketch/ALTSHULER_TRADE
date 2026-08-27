@@ -1,0 +1,4 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.AzureServiceBusIntegration\obj\Debug\Alt.Crm.Plugins.AzureServiceBusIntegration.csproj.AssemblyReference.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.AzureServiceBusIntegration\obj\Debug\Alt.Crm.Plugins.AzureServiceBusIntegration.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.AzureServiceBusIntegration\obj\Debug\Alt.Crm.Plugins.AzureServiceBusIntegration.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.AzureServiceBusIntegration\obj\Debug\Alt.Crm.Plugins.AzureServiceBusIntegration.pdb

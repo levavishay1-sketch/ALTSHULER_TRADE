@@ -1,0 +1,2 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\Shared\DataModel\ExternalServices\Alt.DataModel.ExernalServices\obj\Debug\Alt.DataModel.ExernalServices.csproj.AssemblyReference.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\Shared\DataModel\ExternalServices\Alt.DataModel.ExernalServices\obj\Debug\Alt.DataModel.ExernalServices.csproj.CoreCompileInputs.cache

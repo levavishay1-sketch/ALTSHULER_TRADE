@@ -1,0 +1,19 @@
+{
+    "data":[
+        {
+            "label": "first name",
+            "value": "natalia",
+            "match": true
+        },
+        {
+            "label": "last name",
+            "value": "sakharov",
+            "match": false
+        },
+        {
+            "label": "sex",
+            "value": "נקבה",
+            "match": true
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.ArchiveDocumentSearch\obj\Debug\Alt.Crm.Plugins.ArchiveDocumentSearch.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.ArchiveDocumentSearch\obj\Debug\Alt.Crm.Plugins.ArchiveDocumentSearch.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.ArchiveDocumentSearch\obj\Debug\Alt.Crm.Plugins.ArchiveDocumentSearch.pdb

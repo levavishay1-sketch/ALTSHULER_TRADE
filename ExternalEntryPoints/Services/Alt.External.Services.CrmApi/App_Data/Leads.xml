@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Controllers>
+	<Controller Name="Leads">
+		<Route Path="api/leads">
+			<Action Name="Post">
+				<SourceSystemValidation Default="true">
+					<Property Name="MobilePhone">
+						<Required>1</Required>
+					</Property>
+					<Property Name="LeadSourceCode">
+						<Required>1</Required>
+					</Property>
+					<Property Name="FirstName">
+						<Required>0</Required>
+					</Property>
+					<Property Name="LastName">
+						<Required>0</Required>
+					</Property>
+					<Property Name="IdentityNumber">
+						<Required>0</Required>
+					</Property>
+					<Property Name="EmailAddress1">
+						<Required>0</Required>
+					</Property>
+					<Property Name="MarketingClub">
+						<Required>0</Required>
+					</Property>
+					<Property Name="MarketingMedium">
+						<Required>0</Required>
+					</Property>
+					<Property Name="MarketingPageType">
+						<Required>0</Required>
+					</Property>
+					<Property Name="MarketingPhrase">
+						<Required>0</Required>
+					</Property>
+					<Property Name="MarketingSerialNumber">
+						<Required>0</Required>
+					</Property>
+					<Property Name="CompanyName">
+						<Required>0</Required>
+					</Property>
+					<Property Name="MarketingSource">
+						<Required>0</Required>
+					</Property>
+					<Property Name="CampaignName">
+						<Required>0</Required>
+					</Property>
+					<Property Name="Description">
+						<Required>0</Required>
+					</Property>
+					<Property Name="CreationMethodCode">
+						<DefaultValue>2</DefaultValue>
+					</Property>
+					<Property Name="ApiConfigurationCode">
+						<Required>0</Required>
+					</Property>
+				</SourceSystemValidation>
+				<SourceSystemValidation PropertyToCheck="LeadSourceCode" CheckValue="4">
+					<Property Name="MobilePhone">
+						<Required>1</Required>
+					</Property>
+					<Property Name="LeadSourceCode">
+						<Required>1</Required>
+					</Property>
+					<Property Name="CampaignName">
+						<Required>0</Required>
+					</Property>			
+					<Property Name="MarketingMedium">
+						<Required>0</Required>
+					</Property>
+					<Property Name="MarketingSource">
+						<Required>0</Required>
+					</Property>
+					<Property Name="CreationMethodCode">
+						<DefaultValue>2</DefaultValue>
+					</Property>
+					<Property Name="ApiConfigurationCode">
+						<DefaultValue>4</DefaultValue>
+					</Property>
+				</SourceSystemValidation>
+			</Action>
+			<Action Name="Put">
+				<SourceSystemValidation PropertyToCheck="LeadSourceCode" CheckValue="4">
+					<Property Name="LeadIdentityNumber">
+						<Required>1</Required>
+					</Property>
+					<Property Name="LeadSourceCode">
+						<Required>1</Required>
+					</Property>
+					<Property Name="CampaignName">
+						<Required>0</Required>
+					</Property>
+					<Property Name="FirstName">
+						<Required>0</Required>
+					</Property>
+					<Property Name="LastName">
+						<Required>0</Required>
+					</Property>
+					<Property Name="FullName">
+						<Required>0</Required>
+					</Property>
+					<Property Name="IdentityNumber">
+						<Required>0</Required>
+					</Property>
+					<Property Name="MarketingMedium">
+						<Required>0</Required>
+					</Property>
+					<Property Name="MarketingSource">
+						<Required>0</Required>
+					</Property>
+					<Property Name="EmailAddress1">
+						<Required>0</Required>
+					</Property>
+					<Property Name="ApiConfigurationCode">
+						<DefaultValue>4</DefaultValue>
+					</Property>
+				</SourceSystemValidation>
+			</Action>
+		</Route>
+	</Controller>
+</Controllers>

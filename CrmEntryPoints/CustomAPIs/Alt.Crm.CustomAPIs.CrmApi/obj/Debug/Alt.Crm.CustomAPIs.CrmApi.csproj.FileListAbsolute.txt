@@ -1,0 +1,1 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\CustomAPIs\Alt.Crm.CustomAPIs.CrmApi\obj\Debug\Alt.Crm.CustomAPIs.CrmApi.csproj.CoreCompileInputs.cache

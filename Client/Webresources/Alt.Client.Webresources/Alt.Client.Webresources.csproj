@@ -1,0 +1,191 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8663488-8617-48C7-93D9-98830BB0160F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alt.Client.Webresources</RootNamespace>
+    <AssemblyName>Alt.Client.Webresources</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="alt_\html\CustomerPopup.html" />
+    <Content Include="alt_\img\DigitalForm.svg" />
+    <Content Include="alt_\img\DigitalFormtStatus.svg" />
+    <Content Include="alt_\img\EmailTemplate.svg" />
+    <Content Include="alt_\img\Sms.svg" />
+    <Content Include="alt_\img\SmsTemplate.svg" />
+    <Content Include="alt_\img\SystemLog.svg" />
+    <Content Include="alt_\img\SystemLog_32.png" />
+    <Content Include="alt_\js\forms\AccountHolderCommonBL.js" />
+    <Content Include="alt_\js\forms\AccountHolderMain.js" />
+    <Content Include="alt_\js\forms\AccountHolderQuickCreate.js" />
+    <Content Include="alt_\js\forms\AccountHolderRibbon.js" />
+    <Content Include="alt_\js\forms\ActivityTemplateCommonBL.js" />
+    <Content Include="alt_\js\forms\ApiConfigurationMain.js" />
+    <Content Include="alt_\js\forms\AppointmentMain.js" />
+    <Content Include="alt_\js\forms\AuthorizationManagementMain.js" />
+    <Content Include="alt_\js\forms\BlacklistsCheckCommonBL.js" />
+    <Content Include="alt_\js\forms\BlacklistsCheckMain.js" />
+    <Content Include="alt_\js\forms\BlacklistsCheckQuickCreate.js" />
+    <Content Include="alt_\js\forms\ContactMain.js" />
+    <Content Include="alt_\js\forms\CustomerActivitiesCommonBL.js" />
+    <Content Include="alt_\js\forms\CustomerOperationRequestRibbon.js" />
+    <Content Include="alt_\js\forms\DigitalFormMain.js" />
+    <Content Include="alt_\js\forms\DigitalFormRibbon.js" />
+    <Content Include="alt_\js\forms\DigitalFormVerificationMain.js" />
+    <Content Include="alt_\js\forms\DocumentMain.js" />
+    <Content Include="alt_\js\forms\DocumentRibbon.js" />
+    <Content Include="alt_\js\forms\DocumentSearchCommonBL.js" />
+    <Content Include="alt_\js\forms\EmailMain.js" />
+    <Content Include="alt_\js\forms\EmailTemplateMain.js" />
+    <Content Include="alt_\js\forms\IncidentTradeCommon.js" />
+    <Content Include="alt_\js\forms\IncidentMain.js" />
+    <Content Include="alt_\js\forms\IncidentQuickCreate.js" />
+    <Content Include="alt_\js\forms\IncidentRibbon.js" />
+    <Content Include="alt_\js\forms\IncidentStatusLogCommon.js" />
+    <Content Include="alt_\js\forms\IncidentStatusLogMain.js" />
+    <Content Include="alt_\js\forms\IncidentStatusLogQuickCreate.js" />
+    <Content Include="alt_\js\forms\IncidentTradeMain.js" />
+    <Content Include="alt_\js\forms\IncidentTradeQuickCreate.js" />
+    <Content Include="alt_\js\forms\KYCMain.js" />
+    <Content Include="alt_\js\forms\KYCRibbon.js" />
+    <Content Include="alt_\js\forms\LeadMain.js" />
+    <Content Include="alt_\js\forms\LeadRibbon.js" />
+    <Content Include="alt_\js\forms\OpportunityMain.js" />
+    <Content Include="alt_\js\forms\OpportunityRibbon.js" />
+    <Content Include="alt_\js\forms\PhoneCallMain.js" />
+    <Content Include="alt_\js\forms\PhoneCallQuickCreate.js" />
+    <Content Include="alt_\js\forms\PopulationRegistryCustomerVerificationCommonBL.js" />
+    <Content Include="alt_\js\forms\PopulationRegistryCustomerVerificationMain.js" />
+    <Content Include="alt_\js\forms\PopulationRegistryCustomerVerificationQuickCreate.js" />
+    <Content Include="alt_\js\forms\PortfolioMain.js" />
+    <Content Include="alt_\js\forms\PortfolioRibbon.js" />
+    <Content Include="alt_\js\forms\RepresentativeRewardMain.js" />
+    <Content Include="alt_\js\forms\ScheduledOperationMain.js" />
+    <Content Include="alt_\js\forms\SMSMain.js" />
+    <Content Include="alt_\js\forms\SMSRibbon.js" />
+    <Content Include="alt_\js\forms\SMSTemplateMain.js" />
+    <Content Include="alt_\js\forms\TreatmentStatusMain.js" />
+    <Content Include="alt_\js\utils\Utils.CrmPage.js" />
+    <Content Include="alt_\js\utils\Utils.Global.js" />
+    <Content Include="alt_\js\utils\Utils.JsExtantions.js" />
+    <Content Include="alt_\js\utils\Utils.Server.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="alt_\js\utils\Utils.Enums.js" />
+    <Content Include="alt_\js\utils\Utils.Validators.js" />
+    <Content Include="alt_\js\utils\Utils.UIHandler.js" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="alt_\css\" />
+    <Folder Include="alt_\js\external\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53850</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53850/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

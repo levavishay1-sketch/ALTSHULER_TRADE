@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Controllers>
+	<Controller Name="DigitalForms">
+		<Route Path="api/digitalforms">
+			<Action Name="Post">
+				<SourceSystemValidation Default="true" PropertyToCheck="DigitalFormType" CheckValue="1">
+					<Property Name="DigitalFormLink">
+						<Required>1</Required>
+					</Property>
+					<Property Name="DigitalFormIdentityNumber">
+						<Required>1</Required>
+					</Property>
+					<Property Name="DigitalFormStatus">
+						<Required>1</Required>
+						<InnerProperty Name="Code">
+							<Required>1</Required>
+						</InnerProperty>
+					</Property>
+					<Property Name="DigitalFormType">
+						<Required>1</Required>
+					</Property>
+					<Property Name="ApiConfigurationCode">
+						<DefaultValue>3</DefaultValue>
+					</Property>
+					<Property Name="CreationMethodCode">
+						<DefaultValue>2</DefaultValue>
+					</Property>
+					<Property Name="SourceSystemCode">
+						<DefaultValue>2</DefaultValue>
+					</Property>
+				</SourceSystemValidation>
+			</Action>
+			<Action Name="Post">
+				<SourceSystemValidation Default="true" PropertyToCheck="SourceSystemCode" CheckValue="3">
+					<Property Name="DigitalFormLink">
+						<Required>1</Required>
+					</Property>
+					<Property Name="DigitalFormIdentityNumber">
+						<Required>0</Required>
+					</Property>
+					<Property Name="DigitalFormStatus">
+						<Required>0</Required>
+						<InnerProperty Name="Code">
+							<Required>1</Required>
+						</InnerProperty>
+					</Property>
+					<Property Name="DigitalFormType">
+						<Required>0</Required>
+					</Property>
+					<Property Name="SourceSystemCode">
+						<Required>1</Required>
+					</Property>
+					<Property Name="ApiConfigurationCode">
+						<DefaultValue>21</DefaultValue>
+					</Property>
+					<Property Name="CreationMethodCode">
+						<DefaultValue>2</DefaultValue>
+					</Property>
+					<Property Name="RegardingIncident">
+						<Required>0</Required>
+						<InnerProperty Name="Customer">
+							<Required>1</Required>
+							<InnerProperty Name="CustomerIdentity">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="CustomerTypeCode">
+								<Required>1</Required>
+							</InnerProperty>
+						</InnerProperty>
+						<InnerProperty Name="AutomaticIncidentTemplateKey">
+							<Required>1</Required>
+						</InnerProperty>
+						<InnerProperty Name="OperationalDetails">
+							<Required>0</Required>
+						</InnerProperty>
+            <InnerProperty Name="ExternalIdentifier">
+              <Required>1</Required>
+            </InnerProperty>				
+					</Property>
+          <InnerProperty Name="DigitalFormTemplate">
+            <Required>1</Required>
+            <InnerProperty Name="Code">
+              <Required>1</Required>
+            </InnerProperty>
+          </InnerProperty>
+				</SourceSystemValidation>
+			</Action>
+			<Action Name="Put">
+				<SourceSystemValidation PropertyToCheck="DigitalFormType" CheckValue="1">
+					<Property Name="Id">
+						<Required>1</Required>
+					</Property>
+					<Property Name="DigitalFormType">
+						<Required>1</Required>
+					</Property>
+					<Property Name="DigitalFormStatus">
+						<Required>1</Required>
+						<InnerProperty Name="Code">
+							<Required>1</Required>
+						</InnerProperty>
+					</Property>
+					<Property Name="JoiningForm">
+						<Required>0</Required>
+						<InnerProperty Name="CreditRequestExistsCode">
+							<Required>0</Required>
+						</InnerProperty>
+						<InnerProperty Name="ShortSaleRequestApprovaIExistsCode">
+							<Required>0</Required>
+						</InnerProperty>
+						<InnerProperty Name="CreditAmountNISRequest">
+							<Required>0</Required>
+						</InnerProperty>
+						<InnerProperty Name="OptionExerciseRequestApprovalExistsCode">
+							<Required>0</Required>
+						</InnerProperty>
+						<InnerProperty Name="VotingDocumentsCode">
+							<Required>0</Required>
+						</InnerProperty>
+						<InnerProperty Name="QuarterlyReportsSendingCode">
+							<Required>1</Required>
+						</InnerProperty>
+						<InnerProperty Name="AccountVerificationCode">
+							<Required>0</Required>
+						</InnerProperty>
+						<InnerProperty Name="BankAccountNumber">
+							<Required>0</Required>
+						</InnerProperty>
+						<InnerProperty Name="BankAccountName">
+							<Required>0</Required>
+						</InnerProperty>
+						<InnerProperty Name="Bank">
+							<Required>0</Required>
+							<InnerProperty Name="Code">
+								<Required>1</Required>
+							</InnerProperty>
+						</InnerProperty>
+						<InnerProperty Name="Branch">
+							<Required>0</Required>
+							<InnerProperty Name="Code">
+								<Required>1</Required>
+							</InnerProperty>
+						</InnerProperty>
+						<InnerProperty Name="PortfolioOwners">
+							<Required>1</Required>
+							<InnerProperty Name="IdentificationNumber">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="IdentificationTypeCode">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="IDIssueDate">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="FirstName">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="LastName">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="FirstNameEng">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="LastNameEng">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="BirthDate">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="GenderCode">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="HouseNumber">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="FlatNumber">
+								<Required>0</Required>
+							</InnerProperty>
+							<InnerProperty Name="BeneficiarySigningDeclarationCode">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="UserCharacteristicCode">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="Email">
+								<Required>0</Required>
+							</InnerProperty>
+							<InnerProperty Name="MobilePhone">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="PostalCode">
+								<Required>0</Required>
+							</InnerProperty>
+							<InnerProperty Name="PerformVerificationSystemUser">
+								<Required>0</Required>
+								<InnerProperty Name="Id">
+									<Required>1</Required>
+								</InnerProperty>
+							</InnerProperty>
+							<InnerProperty Name="City">
+								<Required>1</Required>
+								<InnerProperty Name="Code">
+									<Required>1</Required>
+								</InnerProperty>
+							</InnerProperty>
+							<InnerProperty Name="Street">
+								<Required>1</Required>
+								<InnerProperty Name="Code">
+									<Required>1</Required>
+								</InnerProperty>
+							</InnerProperty>
+							<InnerProperty Name="Country">
+								<Required>0</Required>
+								<InnerProperty Name="Code">
+									<Required>1</Required>
+								</InnerProperty>
+							</InnerProperty>
+							<InnerProperty Name="BirthCountry">
+								<Required>1</Required>
+								<InnerProperty Name="Code">
+									<Required>1</Required>
+								</InnerProperty>
+							</InnerProperty>
+							<InnerProperty Name="IdentificationIssuingCountry">
+								<Required>1</Required>
+								<InnerProperty Name="Code">
+									<Required>1</Required>
+								</InnerProperty>
+							</InnerProperty>
+							<InnerProperty Name="DigitalVisualRecognitionCode">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="MainAccountHolder">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="AllowMarketingContent">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="PerformVerificationCode">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="PerformVerificationDate">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="AccountHolderTypeCode">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="BeneficiaryDeclarationCode">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="IsraeliResidency">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="USPersonDeclaration">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="ForeignTaxResidency">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="ChangeIsraeliResidency">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="ChangeUSPersonDeclaration">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="ChangeForeignTaxResidency">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="SpouseAccountHolder">
+								<Required>0</Required>
+								<InnerProperty Name="IdentificationNumber">
+									<Required>1</Required>
+								</InnerProperty>
+							</InnerProperty>
+							<InnerProperty Name="BeneficiarySpouseAccountHolder">
+								<Required>0</Required>
+								<InnerProperty Name="IdentificationNumber">
+									<Required>1</Required>
+								</InnerProperty>
+							</InnerProperty>
+							<InnerProperty Name="BeneficiaryDeclarationTranscriptAutentix">
+								<Required>0</Required>
+							</InnerProperty>
+							<InnerProperty Name="AU10tixSessionID">
+								<Required>0</Required>
+							</InnerProperty>
+							<InnerProperty Name="CheckTerrorOrganizationCode">
+								<Required>0</Required>
+							</InnerProperty>
+							<InnerProperty Name="CheckTerrorOrganizationSystemUser">
+								<Required>0</Required>
+								<InnerProperty Name="Id">
+									<Required>1</Required>
+								</InnerProperty>
+							</InnerProperty>
+							<InnerProperty Name="KYC">
+								<Required>1</Required>
+								<InnerProperty Name="TradeRelationRiskTerritory">
+									<Required>1</Required>
+								</InnerProperty>
+								<InnerProperty Name="EmploymentTypeCode">
+									<Required>1</Required>
+								</InnerProperty>
+								<InnerProperty Name="EmploymentCategoryDesc">
+									<Required>0</Required>
+								</InnerProperty>
+								<InnerProperty Name="OtherEmploymentDesc">
+									<Required>0</Required>
+								</InnerProperty>
+								<InnerProperty Name="BankServiceDenial">
+									<Required>1</Required>
+								</InnerProperty>
+								<InnerProperty Name="MonthlyIncomeLevelNISCode">
+									<Required>1</Required>
+								</InnerProperty>
+								<InnerProperty Name="PublicPerson">
+									<Required>1</Required>
+								</InnerProperty>
+								<InnerProperty Name="AdditionalAccountExistsAtAltshuler">
+									<Required>1</Required>
+								</InnerProperty>
+								<InnerProperty Name="FundsSourceCode">
+									<Required>1</Required>
+								</InnerProperty>
+								<InnerProperty Name="FundsDepositFrequencyForecastCode">
+									<Required>1</Required>
+								</InnerProperty>
+								<InnerProperty Name="TotalDepositForecastPerYearCode">
+									<Required>1</Required>
+								</InnerProperty>
+								<InnerProperty Name="TotalWithdrawalOrTransferForecastCode">
+									<Required>1</Required>
+								</InnerProperty>
+								<InnerProperty Name="YearlyTotalWithdrawalTransferForecastCode">
+									<Required>1</Required>
+								</InnerProperty>
+								<InnerProperty Name="TransactionsToFromThirdParty">
+									<Required>1</Required>
+								</InnerProperty>
+								<InnerProperty Name="TransactionsRelationToFromThirdParty">
+									<Required>0</Required>
+								</InnerProperty>
+								<InnerProperty Name="AdditionalAccountDetails">
+									<Required>0</Required>
+								</InnerProperty>
+								<InnerProperty Name="WorkplaceName">
+									<Required>0</Required>
+								</InnerProperty>
+								<InnerProperty Name="WorkplaceRole">
+									<Required>0</Required>
+								</InnerProperty>
+								<InnerProperty Name="BusinessName">
+									<Required>0</Required>
+								</InnerProperty>
+								<InnerProperty Name="EmploymentCategoryOccupation">
+									<Required>0</Required>
+									<InnerProperty Name="Code">
+										<Required>1</Required>
+									</InnerProperty>
+								</InnerProperty>
+							</InnerProperty>
+						</InnerProperty>
+						<InnerProperty Name="PortfolioBeneficiaries">
+							<Required>0</Required>
+							<InnerProperty Name="IdentificationNumber">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="IdentificationTypeCode">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="AccountHolderTypeCode">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="FirstName">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="LastName">
+								<Required>1</Required>
+							</InnerProperty>
+							<InnerProperty Name="CheckTerrorOrganizationCode">
+								<Required>0</Required>
+							</InnerProperty>
+							<InnerProperty Name="CheckTerrorOrganizationSystemUser">
+								<Required>0</Required>
+								<InnerProperty Name="Id">
+									<Required>1</Required>
+								</InnerProperty>
+							</InnerProperty>
+						</InnerProperty>
+						<InnerProperty Name="IPAddress">
+							<Required>1</Required>
+						</InnerProperty>
+						<InnerProperty Name="FormStatusCode">
+							<DefaultValue>1</DefaultValue>
+						</InnerProperty>
+					</Property>
+					<Property Name="ApiConfigurationCode">
+						<DefaultValue>3</DefaultValue>
+						<Required>0</Required>
+					</Property>
+				</SourceSystemValidation>
+				<SourceSystemValidation PropertyToCheck="AbandonedProcessBit" CheckValue="True">
+					<Property Name="Id">
+						<Required>1</Required>
+					</Property>
+					<Property Name="AbandonedProcessBit">
+						<Required>0</Required>
+					</Property>
+					<Property Name="AbandonmentPage">
+						<Required>0</Required>
+					</Property>
+					<Property Name="ApiConfigurationCode">
+						<DefaultValue>3</DefaultValue>
+						<Required>0</Required>
+					</Property>
+				</SourceSystemValidation>
+			</Action>
+		</Route>
+	</Controller>
+</Controllers>

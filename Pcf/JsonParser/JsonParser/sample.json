@@ -1,0 +1,38 @@
+{
+    "codes": {
+        "1": {
+            "controls": [
+                {
+                    "name": "description",
+                    "required": "required"
+                }
+            ]
+        },
+        "2": {
+            "controls": [
+                {
+                    "name": "location",
+                    "visible": true,
+                    "required": "required"
+                }
+            ]
+        },
+        "5": {
+            "controls": [
+                {
+                    "name": "description",
+                    "required": "required"
+                }
+            ]
+        },
+        "6": {
+            "controls": [
+                {
+                    "name": "location",
+                    "visible": true,
+                    "required": "required"
+                }
+            ]
+        }
+    }
+}

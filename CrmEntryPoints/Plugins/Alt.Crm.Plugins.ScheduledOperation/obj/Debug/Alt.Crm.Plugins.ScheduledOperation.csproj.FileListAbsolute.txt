@@ -1,0 +1,3 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.ScheduledOperation\obj\Debug\Alt.Crm.Plugins.ScheduledOperation.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.ScheduledOperation\obj\Debug\Alt.Crm.Plugins.ScheduledOperation.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Plugins\Alt.Crm.Plugins.ScheduledOperation\obj\Debug\Alt.Crm.Plugins.ScheduledOperation.pdb

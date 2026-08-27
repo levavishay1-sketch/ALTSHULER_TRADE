@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      const baseUrl = location.origin;
+
+      const errorMessages = {
+        noCustomerFound: 'לא נמצאו לקוחות',
+        invalidParameters: 'םרמרטרים שהועברו אינם תקינים',
+        retrieveCustomerRequestError: 'שגיאה בעת שליפת לקוחות',
+        retrieveGlobalParameterRequestError:
+          'שגיאה בעת שליפת פרמטר גלובלי עבור קונפיגורצית הקפצת לקוח',
+      };
+
+      let customerPopupConfigurationObject;
+      let productType;
+      let customerType;
+      let filterField;
+
+      document.onreadystatechange = () => {
+        if (document.readyState == 'complete') {
+          getCustomerPopupConfiguration();
+          getParametersFromQueryString();
+          getCustomers();
+        }
+      };
+
+      const getCustomers = () => {
+        let query = '?';
+        query += customerPopupConfigurationObject[productType].select;
+        query += customerPopupConfigurationObject[productType].filter;
+        const url =
+          encodeURI(
+            baseUrl +
+              '/api/data/v9.2/' +
+              customerPopupConfigurationObject[productType].entity +
+              query
+          ) + `%27${filterField}%27`;
+        getAccountHolders(url);
+      };
+
+      const openCustomerForm = (entities) => {
+        debugger;
+        let contactIds = getContactIdsFromRetrievedEntities(entities);
+        if (contactIds.length === 0 || contactIds.length > 1) {
+          openGeneralSearchForm();
+        } else {
+          openContactForm(contactIds[0]);
+        }
+      };
+
+      const openGeneralSearchForm = () => {
+        const searchUrl =
+          baseUrl + `/main.aspx?pagetype=search&searchText=` + filterField;
+        window.location.replace(searchUrl);
+      };
+
+      const openContactForm = (id) => {
+        const recordUrl =
+          baseUrl +
+          `/main.aspx?etn=${customerPopupConfigurationObject[productType].customerTypes[customerType]}&id=${id}&pagetype=entityrecord`;
+        window.location.replace(recordUrl);
+      };
+
+      const getContactIdsFromRetrievedEntities = (entities) => {
+        let contactIds = [];
+        entities.forEach((element) => {
+          if (!contactIds.includes(element._alt_customerid_value)) {
+            contactIds.push(element._alt_customerid_value);
+          }
+        });
+        return contactIds;
+      };
+
+      const getAccountHolders = (url) => {
+        let req = new XMLHttpRequest();
+        req.open('GET', url, true);
+        req.setRequestHeader('OData-MaxVersion', '4.0');
+        req.setRequestHeader('OData-Version', '4.0');
+        req.setRequestHeader('Accept', 'application/json');
+        req.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        req.onreadystatechange = function () {
+          if (this.readyState === 4) {
+            req.onreadystatechange = null;
+            if (this.status === 200) {
+              const result = JSON.parse(this.response);
+              const entities = result.value;
+              openCustomerForm(entities);
+            } else {
+              alert(errorMessages.retrieveCustomerRequestError);
+            }
+          }
+        };
+        req.send();
+      };
+
+      const getParametersFromQueryString = () => {
+        let parameters = new Array();
+        let parsedData;
+        if (location.search != '') {
+          parameters = location.search.substring(1).split('&');
+          for (var i in parameters) {
+            parameters[i] = parameters[i].replace(/\+/g, ' ').split('=');
+            if (parameters[i][0].toLowerCase() == 'data') {
+              parsedData = parseDataValue(parameters[i][1]);
+              break;
+            }
+          }
+          if (parsedData.length < 3) {
+            alert(errorMessages.invalidParameters);
+          } else {
+            productType = parsedData[0][1];
+            customerType = parsedData[1][1];
+            filterField = parsedData[2][1];
+          }
+        } else {
+          alert(errorMessages.invalidParameters);
+        }
+      };
+
+      const parseDataValue = (datavalue) => {
+        if (datavalue != '') {
+          let vals = decodeURIComponent(datavalue).split('&');
+          for (var i in vals) {
+            vals[i] = vals[i].replace(/\+/g, ' ').split('=');
+          }
+          return vals;
+        } else {
+          alert(errorMessages.invalidParameters);
+        }
+      };
+
+      const getCustomerPopupConfiguration = () => {
+        const url =
+          encodeURI(
+            baseUrl +
+              '/api/data/v9.2/alt_globalparameters?$select=alt_value&$filter=alt_name eq '
+          ) + `%27CustomerPopupConfigurationObject%27`;
+        let req = new XMLHttpRequest();
+        req.open('GET', url, false);
+        req.setRequestHeader('OData-MaxVersion', '4.0');
+        req.setRequestHeader('OData-Version', '4.0');
+        req.setRequestHeader('Accept', 'application/json');
+        req.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        req.onreadystatechange = function () {
+          if (this.readyState === 4) {
+            req.onreadystatechange = null;
+            if (this.status === 200) {
+              const result = JSON.parse(this.response);
+              const entities = result.value;
+              customerPopupConfigurationObject = JSON.parse(
+                result.value[0].alt_value
+              );
+            } else {
+              alert(errorMessages.retrieveGlobalParameterRequestError);
+            }
+          }
+        };
+        req.send();
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

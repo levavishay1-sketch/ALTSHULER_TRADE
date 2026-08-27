@@ -1,0 +1,2 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Actions\Alt.Crm.Actions.TemplateGenerator\obj\Debug\Alt.Crm.Actions.TemplateGenerator.csproj.AssemblyReference.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Actions\Alt.Crm.Actions.TemplateGenerator\obj\Debug\Alt.Crm.Actions.TemplateGenerator.csproj.CoreCompileInputs.cache

@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40766247-26A2-4B78-8381-016DCCF4D469}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alt.DataModel.Crm.Core</RootNamespace>
+    <AssemblyName>Alt.DataModel.Crm.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Alt.DataModel.Crm.Core.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.49\lib\net462\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.49\lib\net462\Microsoft.Xrm.Sdk.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Text.Json.6.0.7\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contracts\ActionResult.cs" />
+    <Compile Include="Contracts\ApiActivityPointerBase.cs" />
+    <Compile Include="Contracts\ApiEntityBase.cs" />
+    <Compile Include="Contracts\AppNotificationSettings.cs" />
+    <Compile Include="Contracts\BankDetails.cs" />
+    <Compile Include="Contracts\BankNumberConfiguration.cs" />
+    <Compile Include="Contracts\CrmEntityBuilderConfiguration.cs" />
+    <Compile Include="Contracts\CustomEntityReference.cs" />
+    <Compile Include="Contracts\FileUploadObject.cs" />
+    <Compile Include="Contracts\IncidentBusinessProcessFlow.cs" />
+    <Compile Include="Contracts\AutomaticMailingSettings.cs" />
+    <Compile Include="Contracts\MoneyLaunderingRiskCalculator.cs" />
+    <Compile Include="Contracts\OtpDTO.cs" />
+    <Compile Include="Contracts\PopulationRegistryVerificationSettings.cs" />
+    <Compile Include="Contracts\Recipient.cs" />
+    <Compile Include="Contracts\SearchEntryPointObject.cs" />
+    <Compile Include="Contracts\SearchEntryPointResponse.cs" />
+    <Compile Include="Contracts\ServiceBusCustomMessage.cs" />
+    <Compile Include="Enums\AccountHolderStatusCode.cs" />
+    <Compile Include="Enums\AccountTypeTaxCode.cs" />
+    <Compile Include="Enums\ActivityTemplateTypeCode.cs" />
+    <Compile Include="Enums\AppearsInBlacklistsCode.cs" />
+    <Compile Include="Enums\AppNotificationIconTypeCode.cs" />
+    <Compile Include="Enums\AppNotificationToastTypeCode.cs" />
+    <Compile Include="Enums\AppointmentStatusCode.cs" />
+    <Compile Include="Enums\AuthorizationManagementStatusCode.cs" />
+    <Compile Include="Enums\BeneficiaryDeclarationCode.cs" />
+    <Compile Include="Enums\BlacklistsCheckStatusCode.cs" />
+    <Compile Include="Enums\CalculetedMoneyLaunderingLevelCode.cs" />
+    <Compile Include="Enums\CallStatusCode.cs" />
+    <Compile Include="Enums\CapitalRiskLevelAccountCode.cs" />
+    <Compile Include="Enums\ClubMembershipEligibilityCode.cs" />
+    <Compile Include="Enums\CompanyCode.cs" />
+    <Compile Include="Enums\ComparisonCodes.cs" />
+    <Compile Include="Enums\CustomerOperationRequestStatusCode.cs" />
+    <Compile Include="Enums\CustomerOperationTemplateCode.cs" />
+    <Compile Include="Enums\DigitalFormCreationMethodCode.cs" />
+    <Compile Include="Enums\DocumentProductTypeCode.cs" />
+    <Compile Include="Enums\DocumentTypeCode.cs" />
+    <Compile Include="Enums\FrequencyCode.cs" />
+    <Compile Include="Enums\MatchForDigitalFormVerificationCode.cs" />
+    <Compile Include="Enums\MatchForPortfolioCode.cs" />
+    <Compile Include="Enums\PhoneCallStatusCode.cs" />
+    <Compile Include="Enums\PriorityCode.cs" />
+    <Compile Include="Enums\RecordMatchingCriteriaCode.cs" />
+    <Compile Include="Enums\RepresentativeRewardTypeCode.cs" />
+    <Compile Include="Enums\SchedulerSetupTypeCode.cs" />
+    <Compile Include="Enums\SearchSourceTypeCode.cs" />
+    <Compile Include="Enums\ServiceBusMessageType.cs" />
+    <Compile Include="Enums\RequestProcessingTypeCode.cs" />
+    <Compile Include="Enums\SdkMessageProcessingStepMode.cs" />
+    <Compile Include="Enums\ControlStageStatusCode.cs" />
+    <Compile Include="Enums\CreditRequestCode.cs" />
+    <Compile Include="Enums\CurrentScheduledOperationStatusCode.cs" />
+    <Compile Include="Enums\CustomStateCode.cs" />
+    <Compile Include="Enums\DataComparisonStatusCode.cs" />
+    <Compile Include="Enums\DataReceptionStatusCode.cs" />
+    <Compile Include="Enums\DigitalFormVerificationStatusCode.cs" />
+    <Compile Include="Enums\Gender.cs" />
+    <Compile Include="Enums\AccountHolderTypeCode.cs" />
+    <Compile Include="Enums\IncidentStatusCode.cs" />
+    <Compile Include="Enums\InitialDepositCode.cs" />
+    <Compile Include="Enums\KYCStatusCode.cs" />
+    <Compile Include="Enums\MoneyLaunderinglevelCode.cs" />
+    <Compile Include="Enums\MoneyLaunderingVerificationCode.cs" />
+    <Compile Include="Enums\OpportunityOperationCode.cs" />
+    <Compile Include="Enums\OptinExerciseRequestApprovalCode.cs" />
+    <Compile Include="Enums\PopulateReqisterVerificationCode.cs" />
+    <Compile Include="Enums\PortfolioTypeCode.cs" />
+    <Compile Include="Enums\PortfolioTypeSubCode.cs" />
+    <Compile Include="Enums\PortfolioTypeTaxCode.cs" />
+    <Compile Include="Enums\PortfolioActionTypeCode.cs" />
+    <Compile Include="Enums\ActivityPartyType.cs" />
+    <Compile Include="Enums\ApiConfigurationCode.cs" />
+    <Compile Include="Enums\ApiTypeCode.cs" />
+    <Compile Include="Enums\BeneficiaryDeclarationControlCode.cs" />
+    <Compile Include="Enums\BeneficiarySigningDeclarationCode.cs" />
+    <Compile Include="Enums\CheckTerrorOrganizationCode.cs" />
+    <Compile Include="Enums\CreationMethodCode.cs" />
+    <Compile Include="Enums\CreditRequestExistsCode.cs" />
+    <Compile Include="Enums\CrmPropertyType.cs" />
+    <Compile Include="Enums\CustomActivityEntityState.cs" />
+    <Compile Include="Enums\CustomerTypeCode.cs" />
+    <Compile Include="Enums\DigitalFormStatusCode.cs" />
+    <Compile Include="Enums\DigitalFormTypeCode.cs" />
+    <Compile Include="Enums\DigitalVisualRecognitionCode.cs" />
+    <Compile Include="Enums\EmailStatusCode.cs" />
+    <Compile Include="Enums\EmploymentTypeCode.cs" />
+    <Compile Include="Enums\EntryPointTypeCode.cs" />
+    <Compile Include="Enums\FormStatusCode.cs" />
+    <Compile Include="Enums\FundsSourceCode.cs" />
+    <Compile Include="Enums\HttpMethodCode.cs" />
+    <Compile Include="Enums\IdentificationTypeCode.cs" />
+    <Compile Include="Enums\IdentityTypeCode.cs" />
+    <Compile Include="Enums\LeadSourceCode.cs" />
+    <Compile Include="Enums\LeadStatusCode.cs" />
+    <Compile Include="Enums\ManagerVerificationRequiredCode.cs" />
+    <Compile Include="Enums\ManualHandlingReasonsCode.cs" />
+    <Compile Include="Enums\MessageLevel.cs" />
+    <Compile Include="Enums\MonthlyIncomeLevelNISCode.cs" />
+    <Compile Include="Enums\OpportunityStatusCode.cs" />
+    <Compile Include="Enums\OptionExerciseRequestApprovalExistsCode.cs" />
+    <Compile Include="Enums\PerformVerificationCode.cs" />
+    <Compile Include="Enums\ProductTypeCode.cs" />
+    <Compile Include="Enums\QuarterlyReportsSendingCode.cs" />
+    <Compile Include="Enums\ReportTypeCode.cs" />
+    <Compile Include="Enums\RequestType.cs" />
+    <Compile Include="Enums\ScheduledOperationSetupType.cs" />
+    <Compile Include="Enums\ScheduledOperationStatusCode.cs" />
+    <Compile Include="Enums\SchedulerSetupStatusCode.cs" />
+    <Compile Include="Enums\SecurityOperation.cs" />
+    <Compile Include="Enums\SendFromCode.cs" />
+    <Compile Include="Enums\ShortSaleRequestApprovaIExistsCode.cs" />
+    <Compile Include="Enums\SmsStatusCode.cs" />
+    <Compile Include="Enums\SourceSystemCode.cs" />
+    <Compile Include="Enums\SystemCode.cs" />
+    <Compile Include="Enums\TaskStatusCode.cs" />
+    <Compile Include="Enums\TeamCodes.cs" />
+    <Compile Include="Enums\TemplateType.cs" />
+    <Compile Include="Enums\TotalDepositForecastPerYearCode.cs" />
+    <Compile Include="Enums\TransferStatusCode.cs" />
+    <Compile Include="Enums\UserCharacteristicCode.cs" />
+    <Compile Include="Enums\VotingDocumentsCode.cs" />
+    <Compile Include="Enums\YesNoCode.cs" />
+    <Compile Include="Errors\CrmErrorCodes.cs" />
+    <Compile Include="Errors\CustomErrorCodes.cs" />
+    <Compile Include="Errors\Error.cs" />
+    <Compile Include="Errors\ErrorType.cs" />
+    <Compile Include="Interfaces\ICrmEntityMapperable.cs" />
+    <Compile Include="Interfaces\ICrmServiceManager.cs" />
+    <Compile Include="Interfaces\IEntityValueResolver.cs" />
+    <Compile Include="Interfaces\ILog.cs" />
+    <Compile Include="Interfaces\IModifiedProperties.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\ISerializer.cs" />
+    <Compile Include="Interfaces\IServiceManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Alt.DataModel.Crm.Core.snk" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

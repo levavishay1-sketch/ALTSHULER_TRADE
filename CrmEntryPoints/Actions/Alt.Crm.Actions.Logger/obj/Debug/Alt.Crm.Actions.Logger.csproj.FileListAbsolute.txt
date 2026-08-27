@@ -1,0 +1,3 @@
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Actions\Alt.Crm.Actions.Logger\obj\Debug\Alt.Crm.Actions.Logger.csproj.CoreCompileInputs.cache
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Actions\Alt.Crm.Actions.Logger\obj\Debug\Alt.Crm.Actions.Logger.dll
+C:\Users\avishayl\source\repos\Alt_CRM_Trade\Main\Altshuler\CrmEntryPoints\Actions\Alt.Crm.Actions.Logger\obj\Debug\Alt.Crm.Actions.Logger.pdb
