@@ -27,12 +27,12 @@
 
 ## 3. Change 7 — attribute-metadata dictionary lookup
 
-- [ ] 3.1 In `ManagerControlChangeTrackingBL.GetChangedFields`, build `var attrByName = entityMetadata.Attributes.ToDictionary(a => a.LogicalName, a => a, StringComparer.OrdinalIgnoreCase);` once before the loop; replace the per-field `entityMetadata.Attributes.FirstOrDefault(...)` with `attrByName.TryGetValue(fieldName, out var attributeMetadata)`. Keep the `attributeMetadata == null` / not-found `continue` behaviour.
+- [x] 3.1 In `ManagerControlChangeTrackingBL.GetChangedFields`, build `var attrByName = entityMetadata.Attributes.ToDictionary(a => a.LogicalName, a => a, StringComparer.OrdinalIgnoreCase);` once before the loop; replace the per-field `entityMetadata.Attributes.FirstOrDefault(...)` with `attrByName.TryGetValue(fieldName, out var attributeMetadata)`. Keep the `attributeMetadata == null` / not-found `continue` behaviour.
 - [ ] 3.2 Build; verify no new warnings/errors.
 - [ ] 3.3 **No-regression test:** repeat baseline 0.4 with a form edit that changes **several** reviewable fields of different types at once (an option set, a text field, a lookup, a date, a currency, a two-option field). Confirm the resulting `alt_ChangesAfterManagerApproval` block lists exactly the same fields, in the same order, with the same old/new display values and the same `שדה:` (field display name) labels as the production build.
 - [ ] 3.4 **No-regression test — unknown attribute:** if feasible, craft an update whose target contains an attribute not in entity metadata (rare; e.g. a removed field via SDK) and confirm it is still silently skipped.
-- [ ] 3.5 **Provides-value check:** confirmed by code review (O(fields) dictionary build + O(1) lookups vs O(fields × attributes) scan); no trace metric needed.
-- [ ] 3.6 Commit (1 file): `perf(change-tracking): index attribute metadata by name in GetChangedFields`.
+- [x] 3.5 **Provides-value check:** confirmed by code review (O(fields) dictionary build + O(1) lookups vs O(fields × attributes) scan); no trace metric needed.
+- [x] 3.6 Commit (1 file): `perf(change-tracking): index attribute metadata by name in GetChangedFields`. (commit 0f401d7)
 
 ## 4. Change 4 — cache deserialized global-parameter dictionaries
 
