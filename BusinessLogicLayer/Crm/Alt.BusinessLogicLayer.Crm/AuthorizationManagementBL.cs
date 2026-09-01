@@ -437,11 +437,12 @@ namespace Alt.BusinessLogicLayer.Crm
         {
             this.GlobalContext.LogEntry();
 
-            return teamsCodes.FirstOrDefault(x =>
-                x.Value == teamDal.Get(
-                    controlStageTeamId.Id,
-                    new[] { Team.Fields.alt_TeamCodeInt })
-                .alt_TeamCodeInt).Key;
+            int? teamCode = teamDal.Get(
+                controlStageTeamId.Id,
+                new[] { Team.Fields.alt_TeamCodeInt })
+                .alt_TeamCodeInt;
+
+            return teamsCodes.FirstOrDefault(x => x.Value == teamCode).Key;
         }
 
 

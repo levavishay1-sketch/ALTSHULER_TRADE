@@ -203,7 +203,8 @@ namespace Alt.BusinessLogicLayer.Crm
                 {
                     TeamDAL teamDAL = new TeamDAL(this.GlobalContext);
                     Dictionary<string, int> teamsCodesParameter = JsonSerializer.Deserialize<Dictionary<string, int>>(GlobalContext.CacheManager.GetGlobalParameter<string>("TeamsCodes"));
-                    if (teamsCodesParameter.FirstOrDefault(x => x.Value == teamDAL.Get(mergedDigitalFormVerification.alt_ControlStageTeamId.Id, new string[] { Team.Fields.alt_TeamCodeInt }).alt_TeamCodeInt).Key == "OperationalControl")
+                    int? controlStageTeamCode = teamDAL.Get(mergedDigitalFormVerification.alt_ControlStageTeamId.Id, new string[] { Team.Fields.alt_TeamCodeInt }).alt_TeamCodeInt;
+                    if (teamsCodesParameter.FirstOrDefault(x => x.Value == controlStageTeamCode).Key == "OperationalControl")
                     {
                         if (mergedDigitalFormVerification.alt_InitialDepositCode.Value == (int)InitialDepositCode.AwaitinglDeposit
                             && mergedDigitalFormVerification.alt_FormStatusCode.Value == (int)FormStatusCode.InAuthorizationProcess)
