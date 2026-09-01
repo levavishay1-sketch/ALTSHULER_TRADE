@@ -262,15 +262,32 @@ namespace Alt.BusinessLogicLayer.Crm
                 return;
             }
 
+            string[] excludedFields =
+                GetExcludedFields(target.LogicalName);
+
+            HashSet<string> excludedFieldsLower =
+                new HashSet<string>(
+                    (excludedFields ?? Array.Empty<string>())
+                        .Select(f => f.ToLower()));
+
+            List<string> relevantFields =
+                target.Attributes.Keys
+                    .Where(fieldName =>
+                        !string.IsNullOrWhiteSpace(fieldName)
+                        && !excludedFieldsLower.Contains(fieldName.ToLower()))
+                    .ToList();
+
+            if (relevantFields.Count == 0)
+            {
+                return;
+            }
+
             EntityMetadata entityMetadata = GlobalContext.GetEntityMetadata(target.LogicalName);
 
             if (entityMetadata == null)
             {
                 return;
             }
-
-            string[] excludedFields =
-                GetExcludedFields(target.LogicalName);
 
             List<ChangeLogItem> changes =
                 GetChangedFields(
@@ -920,6 +937,19 @@ namespace Alt.BusinessLogicLayer.Crm
                         .Select(f => f.ToLower())
                         .ToList()
                     : new List<string>();
+
+
+            List<string> relevantFields =
+                target.Attributes.Keys
+                    .Where(fieldName =>
+                        !string.IsNullOrWhiteSpace(fieldName)
+                        && !excludedFieldsLower.Contains(fieldName.ToLower()))
+                    .ToList();
+
+            if (relevantFields.Count == 0)
+            {
+                return false;
+            }
 
 
             EntityMetadata entityMetadata =
