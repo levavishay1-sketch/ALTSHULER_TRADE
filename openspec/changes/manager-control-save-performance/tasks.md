@@ -34,7 +34,7 @@
 - [x] 3.5 **Provides-value check:** confirmed by code review (O(fields) dictionary build + O(1) lookups vs O(fields × attributes) scan); no trace metric needed.
 - [x] 3.6 Commit (1 file): `perf(change-tracking): index attribute metadata by name in GetChangedFields`. (commit 0f401d7)
 
-## 4. Change 4 — cache deserialized global-parameter dictionaries
+## 4. Change 4 — cache deserialized global-parameter dictionaries — SKIPPED (deferred by request)
 
 - [ ] 4.1 Add `Alt.Framework.Cache.ParsedJsonCache` with `static T GetOrParse<T>(string json, Func<string,T> parser)` backed by `static ConcurrentDictionary<(Type,string),object>`. Unit-invariant: same `json` string returns a value equal to `parser(json)`; a different string re-parses.
 - [ ] 4.2 In `ManagerControlChangeTrackingBL.GetExcludedFields` and `GetTeamsCodes`, keep the existing `GetGlobalParameter<string>` call to fetch the cached JSON string, then parse via `ParsedJsonCache.GetOrParse(json, s => JsonSerializer.Deserialize<...>(s))`. Same null/empty handling as today (empty/whitespace → `Array.Empty`/`null` before touching the cache).
@@ -47,7 +47,7 @@
 - [ ] 4.9 **Provides-value check:** enable Plugin Trace Log and confirm the `GetExcludedFields` / `GetTeamsCodes` `LogEntry` lines no longer show repeated deserialization work within one save (trace shows the parse happening once per distinct JSON string per worker). Compare `SystemPostUpdateDigitalFormVerification` execution duration to baseline.
 - [ ] 4.10 Commit (2–3 files): `perf(config): parse ManagerApprovalExcludedFields and TeamsCodes once per value`.
 
-## 5. Change 1 — cache entity metadata
+## 5. Change 1 — cache entity metadata — SKIPPED (deferred by request)
 
 - [ ] 5.1 Add `Alt.Framework.Cache.EntityMetadataCache` with `static EntityMetadata GetOrAdd(string logicalName, Func<EntityMetadata> factory)`: `ConcurrentDictionary<string,CacheEntry>`, `CacheEntry { EntityMetadata Value; DateTime RetrievedUtc; }`, `const int TtlMinutes = 30`, factory run once per key per TTL window (`Lazy<EntityMetadata>` or double-checked lock), only non-null results cached.
 - [ ] 5.2 Route `GlobalContext.GetEntityMetadata(string)` through `EntityMetadataCache.GetOrAdd(name, () => this.OrganizationService.GetEntityMetadata(name))`.
@@ -62,15 +62,15 @@
 
 ## 6. Change 9 — name-filter early-out before metadata/lookup retrieves
 
-- [ ] 6.1 In `HasRevalntFieldsChanged`: after computing `excludedFieldsLower`, compute `relevant = target.Attributes.Keys` minus blanks minus excluded; if `relevant.Count == 0` return `false` **before** `GlobalContext.GetEntityMetadata`. (After change 8 this method no longer calls `GetEntityMetadata`; the early-out still avoids the loop and, with change 8, is the only pre-work.)
-- [ ] 6.2 In `TrackChanges`: keep all existing guard clauses (`digitalFormVerification == null`, `IsAllowedAuthorizationStatus`, `GetControlStageName`, `alt_LastManagerApprovalDate` check, `preImage == null → SaveCreation`). **After** those, compute the same `relevant` set and, if empty, `return;` **before** `GlobalContext.GetEntityMetadata(target.LogicalName)` and `GetChangedFields`. This must land exactly where the code currently proceeds to metadata retrieval.
+- [x] 6.1 In `HasRevalntFieldsChanged`: after computing `excludedFieldsLower`, compute `relevant = target.Attributes.Keys` minus blanks minus excluded; if `relevant.Count == 0` return `false` **before** `GlobalContext.GetEntityMetadata`. (After change 8 this method no longer calls `GetEntityMetadata`; the early-out still avoids the loop and, with change 8, is the only pre-work.)
+- [x] 6.2 In `TrackChanges`: keep all existing guard clauses (`digitalFormVerification == null`, `IsAllowedAuthorizationStatus`, `GetControlStageName`, `alt_LastManagerApprovalDate` check, `preImage == null → SaveCreation`). **After** those, compute the same `relevant` set and, if empty, `return;` **before** `GlobalContext.GetEntityMetadata(target.LogicalName)` and `GetChangedFields`. This must land exactly where the code currently proceeds to metadata retrieval.
 - [ ] 6.3 Build; verify no new warnings/errors.
 - [ ] 6.4 **No-regression test — all-excluded nested update:** run the re-approval (0.3). Confirm: (a) the file advances normally; (b) `alt_ChangesAfterManagerApproval` gets ONLY the "manager approval header" block from `BuildManagerApprovalInformation`, no spurious field rows (same as baseline); (c) the file is NOT sent back to Manager Control.
 - [ ] 6.5 **No-regression test — deposit / Shenhav callback:** trigger the automatic-deposit DFV update and the Shenhav open-portfolio response on a post-approval form in Operational Control. Confirm no change-log rows are added and no return to Manager Control (identical to baseline).
 - [ ] 6.6 **No-regression test — real user edit still tracked:** repeat 0.4 (reviewable field change on a post-approval form in Operational Control). Confirm the change IS logged and the file IS returned to Manager Control — the early-out must not suppress this.
 - [ ] 6.7 **No-regression test — creation logging:** create a new `alt_kyc` / `alt_accountholder` under a post-approval form; confirm the "נוצרה רשומה חדשה" entry still appears (the `preImage == null` branch must run before the early-out).
 - [ ] 6.8 **Provides-value check:** Plugin Trace Log for the re-approval (0.3) — `SystemPostUpdateDigitalFormVerification` and `PreUpdateDigitalFormVerification` traces should now show NO `GetEntityMetadata` / `RetrieveLookupValues` calls on the all-excluded nested update. Compare execution duration to the post-change-1 measurement.
-- [ ] 6.9 Commit (1 file): `perf(change-tracking): skip metadata/lookup retrieval when no non-excluded field changed`.
+- [x] 6.9 Commit (1 file): `perf(change-tracking): skip metadata/lookup retrieval when no non-excluded field changed`. (commit 4357cad)
 
 ## 7. Change 8 — value-based comparison in HasRevalntFieldsChanged
 
