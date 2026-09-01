@@ -114,7 +114,6 @@ namespace Alt.BusinessLogicLayer.Crm
         public void SetAuthorizationManagementName(alt_AuthorizationManagement targetAuthorizationManagement)
         {
             this.GlobalContext.LogEntry();
-            this.GlobalContext.Log.Info($"SetAuthorizationManagementName invoked for AuthorizationManagement: {targetAuthorizationManagement?.Id}");
             List<string> nameParts = new List<string>();
             if (targetAuthorizationManagement.AttributeHasValue<EntityReference>(alt_AuthorizationManagement.Fields.alt_DigitalFormVerificationId))
             {
