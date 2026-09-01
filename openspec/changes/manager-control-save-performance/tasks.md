@@ -8,7 +8,7 @@
 
 ## 1. Change 5 — resolve TimeZoneInfo once
 
-- [ ] 1.1 In `ManagerControlChangeTrackingBL`, add `private static readonly TimeZoneInfo IsraelStandardTime = TimeZoneInfo.FindSystemTimeZoneById("Israel Standard Time");` and make `ConvertUtcToIsraelTime` use it. Verify by inspection that no other `FindSystemTimeZoneById` call remains in the class.
+- [x] 1.1 In `ManagerControlChangeTrackingBL`, add `private static readonly TimeZoneInfo IsraelStandardTime = TimeZoneInfo.FindSystemTimeZoneById("Israel Standard Time");` and make `ConvertUtcToIsraelTime` use it. Verify by inspection that no other `FindSystemTimeZoneById` call remains in the class.
 - [ ] 1.2 Build `Altshuler.sln` (Debug) in Visual Studio; verify 0 new warnings/errors in the three affected projects.
 - [ ] 1.3 **No-regression test:** repeat baseline 0.3 and 0.4. Check the new `alt_ChangesAfterManagerApproval` entries: the `תאריך שינוי` / `תאריך אישור מנהל` timestamps must be in Israel local time and match what the old build produced for the same UTC instant (compare against a manually converted value). Confirm identical formatting (`dd/MM/yyyy HH:mm:ss`).
 - [ ] 1.4 **Provides-value check:** in the Plugin Trace Log for the save, confirm the header/among-rows timezone work is no longer repeated — there is no measurable per-row cost; the check is simply that behaviour is unchanged. (This change's value is micro; it is bundled for completeness.)

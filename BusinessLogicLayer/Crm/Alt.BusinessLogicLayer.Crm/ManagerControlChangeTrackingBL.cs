@@ -17,6 +17,12 @@ namespace Alt.BusinessLogicLayer.Crm
         private const string DigitalFormVerificationLookup = "alt_digitalformverificationid";
         private const string ManagerApprovalExcludedFieldsParameter = "ManagerApprovalExcludedFields";
 
+        // Resolved once per process: the Windows time-zone database entry does not change
+        // during a worker's lifetime, and FindSystemTimeZoneById is comparatively expensive
+        // when called once per change-log row.
+        private static readonly TimeZoneInfo IsraelStandardTime =
+            TimeZoneInfo.FindSystemTimeZoneById("Israel Standard Time");
+
         private string[] GetExcludedFields(string entityLogicalName)
         {
             if (string.IsNullOrWhiteSpace(entityLogicalName))
@@ -95,9 +101,6 @@ namespace Alt.BusinessLogicLayer.Crm
 
         private DateTime ConvertUtcToIsraelTime(DateTime dateTime)
         {
-            TimeZoneInfo israelTimeZone =
-                TimeZoneInfo.FindSystemTimeZoneById("Israel Standard Time");
-
             DateTime utcDateTime =
                 DateTime.SpecifyKind(
                     dateTime,
@@ -105,7 +108,7 @@ namespace Alt.BusinessLogicLayer.Crm
 
             return TimeZoneInfo.ConvertTimeFromUtc(
                 utcDateTime,
-                israelTimeZone);
+                IsraelStandardTime);
         }
 
         public void MoveLastAuthorizationManagementBack<T>(T target,T preImage = null) where T : Entity
