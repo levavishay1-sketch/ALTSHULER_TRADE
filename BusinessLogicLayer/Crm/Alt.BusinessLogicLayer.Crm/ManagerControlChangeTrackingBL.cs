@@ -25,6 +25,7 @@ namespace Alt.BusinessLogicLayer.Crm
 
         private string[] GetExcludedFields(string entityLogicalName)
         {
+            this.GlobalContext.LogEntry();
             if (string.IsNullOrWhiteSpace(entityLogicalName))
             {
                 return Array.Empty<string>();
@@ -55,6 +56,7 @@ namespace Alt.BusinessLogicLayer.Crm
 
         private bool IsDigitalFormVerificationRemoved(Entity target, Entity preImage)
         {
+            this.GlobalContext.LogEntry();
             if (target == null || preImage == null)
                 return false;
 
@@ -72,6 +74,7 @@ namespace Alt.BusinessLogicLayer.Crm
     string existingHistory,
     string newEntry)
         {
+            this.GlobalContext.LogEntry();
             if (string.IsNullOrWhiteSpace(existingHistory))
             {
                 return newEntry;
@@ -101,6 +104,7 @@ namespace Alt.BusinessLogicLayer.Crm
 
         private DateTime ConvertUtcToIsraelTime(DateTime dateTime)
         {
+            this.GlobalContext.LogEntry();
             DateTime utcDateTime =
                 DateTime.SpecifyKind(
                     dateTime,
@@ -162,6 +166,7 @@ namespace Alt.BusinessLogicLayer.Crm
         private alt_DigitalFormVerification GetDigitalFormVerificationForAuthorizationBack(
             Guid id)
         {
+            this.GlobalContext.LogEntry();
             DigitalFormVerificationDAL digitalFormVerificationDal =
                 new DigitalFormVerificationDAL(this.GlobalContext);
 
@@ -189,6 +194,7 @@ namespace Alt.BusinessLogicLayer.Crm
 
         private bool IsAllowedAuthorizationStatus(int formStatus)
         {
+            this.GlobalContext.LogEntry();
             return formStatus == (int)FormStatusCode.InAuthorizationProcess
                    ||
                    formStatus == (int)FormStatusCode.AwaitingForDeposit;
@@ -198,6 +204,7 @@ namespace Alt.BusinessLogicLayer.Crm
     Entity target,
     Entity preImage)
         {
+            this.GlobalContext.LogEntry();
             EntityReference reference =
                 ResolveDigitalFormVerificationReference(target, preImage);
 
@@ -294,6 +301,7 @@ namespace Alt.BusinessLogicLayer.Crm
             List<ChangeLogItem> changes,
             DateTime actionDate)
         {
+            this.GlobalContext.LogEntry();
             if (target.LogicalName.Equals(
                     alt_DigitalFormVerification.EntityLogicalName,
                     StringComparison.OrdinalIgnoreCase))
@@ -320,6 +328,7 @@ namespace Alt.BusinessLogicLayer.Crm
             List<ChangeLogItem> changes,
             DateTime actionDate)
         {
+            this.GlobalContext.LogEntry();
             string newChangesLog =
                 BuildChangesLog(changes);
 
@@ -339,6 +348,7 @@ namespace Alt.BusinessLogicLayer.Crm
         private bool IsAuthorizationBackControlTeam(
             EntityReference teamReference)
         {
+            this.GlobalContext.LogEntry();
             int? teamCode = GetTeamCode(teamReference);
 
             if (!teamCode.HasValue)
@@ -362,6 +372,7 @@ namespace Alt.BusinessLogicLayer.Crm
 
         private Dictionary<string, int> GetTeamsCodes()
         {
+            this.GlobalContext.LogEntry();
             string teamsCodesJson =
                 this.GlobalContext.CacheManager
                     .GetGlobalParameter<string>("TeamsCodes");
@@ -378,6 +389,7 @@ namespace Alt.BusinessLogicLayer.Crm
 
         private int? GetTeamCode(EntityReference teamReference)
         {
+            this.GlobalContext.LogEntry();
             if (teamReference == null)
             {
                 return null;
@@ -398,6 +410,7 @@ namespace Alt.BusinessLogicLayer.Crm
         }
         private string GetTeamName(int teamCode)
         {
+            this.GlobalContext.LogEntry();
             Dictionary<string, int> teamsCodes =
                 GetTeamsCodes();
 
@@ -414,6 +427,7 @@ namespace Alt.BusinessLogicLayer.Crm
 
         private string GetControlStageDisplayName(string teamName)
         {
+            this.GlobalContext.LogEntry();
             switch (teamName)
             {
                 case TeamNames.OperationalControl:
@@ -801,6 +815,7 @@ namespace Alt.BusinessLogicLayer.Crm
         private string GetEntityDisplayName(
             string logicalName)
         {
+            this.GlobalContext.LogEntry();
             switch (logicalName)
             {
                 case alt_AccountHolder.EntityLogicalName:
