@@ -16,14 +16,14 @@
 
 ## 2. Change 3 — fix GetCurrentControlStage N+1
 
-- [ ] 2.1 In `AuthorizationManagementBL.GetCurrentControlStage`, retrieve the team once into a local `int? teamCode`, then `return teamsCodes.FirstOrDefault(x => x.Value == teamCode).Key;`. Verify no `teamDal.Get(` remains inside a LINQ predicate in that method.
-- [ ] 2.2 Apply the same transform to the inline `teamsCodesParameter.FirstOrDefault(x => x.Value == teamDAL.Get(...).alt_TeamCodeInt)` in `DigitalFormVerificationBL.SetFormStatusCode` (~line 206). Verify by inspection.
-- [ ] 2.3 Grep the solution for `FirstOrDefault(` combined with `.Get(` on the same line to confirm no other instance of this pattern was missed.
+- [x] 2.1 In `AuthorizationManagementBL.GetCurrentControlStage`, retrieve the team once into a local `int? teamCode`, then `return teamsCodes.FirstOrDefault(x => x.Value == teamCode).Key;`. Verify no `teamDal.Get(` remains inside a LINQ predicate in that method.
+- [x] 2.2 Apply the same transform to the inline `teamsCodesParameter.FirstOrDefault(x => x.Value == teamDAL.Get(...).alt_TeamCodeInt)` in `DigitalFormVerificationBL.SetFormStatusCode` (~line 206). Verify by inspection.
+- [x] 2.3 Grep the solution for `FirstOrDefault(` combined with `.Get(` on the same line to confirm no other instance of this pattern was missed. (Only the two sites above matched.)
 - [ ] 2.4 Build; verify no new warnings/errors.
 - [ ] 2.5 **No-regression test — approval routing:** run a full approval chain on a test form: Joining Control → (manager required) Management Control → approve → Money-Laundering Control → approve → Operational Control → approve → SendToOpenPortfolioInShenhav. At each stage confirm the file advances to the **same** next stage as the current production build (compare `alt_ControlStageTeamId` and the created `alt_authorizationmanagement` names). Also run a path where manager verification is **not** required (Joining → Operational directly).
 - [ ] 2.6 **No-regression test — deposit form-status transition:** on a form in Operational Control with `alt_InitialDepositCode = AwaitinglDeposit` and status InAuthorizationProcess, trigger the deposit path and confirm `alt_FormStatusCode` moves to `AwaitingForDeposit` exactly as before (this exercises the `SetFormStatusCode` team lookup).
 - [ ] 2.7 **Provides-value check:** in Plugin Trace Log for the approval save, count `team` retrieves in the `SystemPostUpdateAuthorizationManagement` and `PreUpdateAuthorizationManagement` traces. Expect the count to drop from ~N per `GetCurrentControlStage` call to 1 per call (compare to baseline 0.3).
-- [ ] 2.8 Commit (2 files): `perf(auth-mgmt): retrieve control-stage team once instead of per TeamsCodes entry`.
+- [x] 2.8 Commit (2 files): `perf(auth-mgmt): retrieve control-stage team once instead of per TeamsCodes entry`. (commit 5ca41d8)
 
 ## 3. Change 7 — attribute-metadata dictionary lookup
 
