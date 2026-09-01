@@ -74,8 +74,8 @@
 
 ## 7. Change 8 — value-based comparison in HasRevalntFieldsChanged
 
-- [ ] 7.1 Add `AttributeValuesEqual(object oldValue, object newValue)` (in `EntityExtensions` or as a private helper in `ManagerControlChangeTrackingBL`) per the table in design.md — null/absent equivalence, `OptionSetValue.Value`, `OptionSetValueCollection` set-equality, `EntityReference` id+logicalname, `Money.Value`, `DateTime` at whole-second precision, primitives by value, `object.Equals` fallback.
-- [ ] 7.2 Rewrite `HasRevalntFieldsChanged`'s loop to iterate the `relevant` set from change 9 and compare `preImage`/`target` values via `AttributeValuesEqual` (treating a missing key as "no value"). Remove the `GlobalContext.GetEntityMetadata` call and the `entityMetadata` local from this method only. Do **not** touch `GetChangedFields`.
+- [x] 7.1 Add `AttributeValuesEqual(object oldValue, object newValue)` (in `EntityExtensions` or as a private helper in `ManagerControlChangeTrackingBL`) per the table in design.md — null/absent equivalence, `OptionSetValue.Value`, `OptionSetValueCollection` set-equality, `EntityReference` id+logicalname, `Money.Value`, `DateTime` at whole-second precision, primitives by value, `object.Equals` fallback. (private helper in `ManagerControlChangeTrackingBL`, with `TruncateToSeconds`)
+- [x] 7.2 Rewrite `HasRevalntFieldsChanged`'s loop to iterate the `relevant` set from change 9 and compare `preImage`/`target` values via `AttributeValuesEqual` (treating a missing key as "no value"). Remove the `GlobalContext.GetEntityMetadata` call and the `entityMetadata` local from this method only. Do **not** touch `GetChangedFields`.
 - [ ] 7.3 Build; verify no new warnings/errors.
 - [ ] 7.4 **No-regression test — matrix of field types.** On a post-approval form in Operational Control, make each of these single-field edits (one save each) and confirm the file returns to Manager Control AND the log records it, exactly as the production build:
   - option-set field → new value
@@ -90,7 +90,7 @@
 - [ ] 7.8 **No-regression test — related entities.** Repeat 7.4's option-set and lookup cases on `alt_accountholder`, `alt_kyc`, `alt_moneylaunderingcalculation` edits and confirm identical trigger + log behaviour.
 - [ ] 7.9 **No-regression test — `SetFormStatusCode` gate.** `SetFormStatusCode` also calls `HasRevalntFieldsChanged` (line 187). Verify the deposit/operational form-status transitions (2.6) and the `AcceptedDepositForApproval` → `InAuthorizationProcess` transition still behave identically — this consumer of the method must not change.
 - [ ] 7.10 **Provides-value check:** Plugin Trace Log — `HasRevalntFieldsChanged` no longer triggers a `GetEntityMetadata` call anywhere (search the trace for `RetrieveEntity` on `alt_digitalformverification` during a `MoveLastAuthorizationManagementBack` / `SetFormStatusCode` call). Combined with change 1, the metadata retrieves for the whole save should now be 0–1.
-- [ ] 7.11 Commit (1–2 files): `perf(change-tracking): compare attribute values by type/identity instead of formatted strings`.
+- [x] 7.11 Commit (1–2 files): `perf(change-tracking): compare attribute values by type/identity instead of formatted strings`. (commit 8bea2f5)
 
 ## 8. Change 2 — remove duplicate TrackChanges from the Post plugin
 
