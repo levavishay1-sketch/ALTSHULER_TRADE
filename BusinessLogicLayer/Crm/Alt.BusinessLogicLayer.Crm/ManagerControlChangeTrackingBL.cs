@@ -635,6 +635,13 @@ namespace Alt.BusinessLogicLayer.Crm
             target.EnrichLookups(lookupEntity);
 
 
+            Dictionary<string, AttributeMetadata> attributeMetadataByName =
+                entityMetadata.Attributes.ToDictionary(
+                    a => a.LogicalName,
+                    a => a,
+                    StringComparer.OrdinalIgnoreCase);
+
+
             foreach (string fieldName in target.Attributes.Keys)
             {
                 if (string.IsNullOrWhiteSpace(fieldName))
@@ -650,14 +657,10 @@ namespace Alt.BusinessLogicLayer.Crm
                 }
 
 
-                AttributeMetadata attributeMetadata =
-                    entityMetadata.Attributes.FirstOrDefault(
-                        x => x.LogicalName.Equals(
-                            fieldName,
-                            StringComparison.OrdinalIgnoreCase));
-
-
-                if (attributeMetadata == null)
+                if (!attributeMetadataByName.TryGetValue(
+                        fieldName,
+                        out AttributeMetadata attributeMetadata)
+                    || attributeMetadata == null)
                 {
                     continue;
                 }
