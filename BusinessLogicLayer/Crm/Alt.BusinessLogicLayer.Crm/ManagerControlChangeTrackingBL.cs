@@ -952,48 +952,12 @@ namespace Alt.BusinessLogicLayer.Crm
             }
 
 
-            EntityMetadata entityMetadata =
-                GlobalContext.GetEntityMetadata(
-                    target.LogicalName);
-
-
-            if (entityMetadata == null)
+            foreach (string fieldName in relevantFields)
             {
-                return false;
-            }
+                target.Attributes.TryGetValue(fieldName, out object newValue);
+                preImage.Attributes.TryGetValue(fieldName, out object oldValue);
 
-
-            foreach (string fieldName in target.Attributes.Keys)
-            {
-                if (string.IsNullOrWhiteSpace(fieldName))
-                {
-                    continue;
-                }
-
-
-                if (excludedFieldsLower.Contains(
-                        fieldName.ToLower()))
-                {
-                    continue;
-                }
-
-
-                string oldValue =
-                    preImage.GetDisplayValue(
-                        fieldName,
-                        entityMetadata);
-
-
-                string newValue =
-                    target.GetDisplayValue(
-                        fieldName,
-                        entityMetadata);
-
-
-                if (!string.Equals(
-                        oldValue,
-                        newValue,
-                        StringComparison.Ordinal))
+                if (!AttributeValuesEqual(oldValue, newValue))
                 {
                     return true;
                 }
@@ -1001,6 +965,74 @@ namespace Alt.BusinessLogicLayer.Crm
 
 
             return false;
+        }
+
+
+        private static bool AttributeValuesEqual(object oldValue, object newValue)
+        {
+            bool oldHasValue = oldValue != null;
+            bool newHasValue = newValue != null;
+
+            if (!oldHasValue && !newHasValue)
+            {
+                return true;
+            }
+
+            if (oldHasValue != newHasValue)
+            {
+                return false;
+            }
+
+            switch (oldValue)
+            {
+                case OptionSetValue oldOptionSet:
+                    return newValue is OptionSetValue newOptionSet
+                        && oldOptionSet.Value == newOptionSet.Value;
+
+                case OptionSetValueCollection oldOptionSetCollection:
+                    if (!(newValue is OptionSetValueCollection newOptionSetCollection))
+                    {
+                        return false;
+                    }
+                    return new HashSet<int>(oldOptionSetCollection.Select(o => o.Value))
+                        .SetEquals(newOptionSetCollection.Select(o => o.Value));
+
+                case EntityReference oldReference:
+                    return newValue is EntityReference newReference
+                        && oldReference.Id == newReference.Id
+                        && string.Equals(
+                            oldReference.LogicalName,
+                            newReference.LogicalName,
+                            StringComparison.OrdinalIgnoreCase);
+
+                case Money oldMoney:
+                    return newValue is Money newMoney
+                        && oldMoney.Value == newMoney.Value;
+
+                case DateTime oldDate:
+                    return newValue is DateTime newDate
+                        && TruncateToSeconds(oldDate) == TruncateToSeconds(newDate);
+
+                case bool _:
+                case int _:
+                case long _:
+                case decimal _:
+                case double _:
+                case string _:
+                case Guid _:
+                    return oldValue.Equals(newValue);
+
+                default:
+                    return object.Equals(oldValue, newValue);
+            }
+        }
+
+
+        private static DateTime TruncateToSeconds(DateTime value)
+        {
+            return new DateTime(
+                value.Ticks - (value.Ticks % TimeSpan.TicksPerSecond),
+                value.Kind);
         }
     }
 
